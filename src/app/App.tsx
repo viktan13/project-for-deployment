@@ -7,6 +7,7 @@ import {AboutPage} from "pages/AboutPage";
 import {MainPage} from "pages/MainPage";
 import {AppRouter} from "app/providers/router";
 import {Navbar} from "widgets/Navbar";
+import {ThemeSwitcher} from "widgets/ThemeSwitcher";
 
 
 const App = () => {
@@ -17,7 +18,6 @@ const App = () => {
         <div className={classNames('app', {}, [theme])}>
             <Navbar />
             <AppRouter/>
-            <button onClick={toggleTheme}>Toggle Theme</button>
         </div>
     );
 };
