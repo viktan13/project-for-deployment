@@ -1,14 +1,12 @@
 import React, {Suspense} from 'react';
 import './styles/index.scss';
-import {Link, Route, Routes} from 'react-router-dom';
 import {classNames} from "shared/lib/classNames";
 import {useTheme} from "app/providers/ThemeProvider";
-import {AboutPage} from "pages/AboutPage";
-import {MainPage} from "pages/MainPage";
 import {AppRouter} from "app/providers/router";
 import {Navbar} from "widgets/Navbar";
-import {ThemeSwitcher} from "widgets/ThemeSwitcher";
 import {Sidebar} from "widgets/Sidebar";
+import {t} from "i18next";
+import {useTranslation} from "react-i18next";
 
 
 const App = () => {
@@ -17,11 +15,13 @@ const App = () => {
 
     return (
         <div className={classNames('app', {}, [theme])}>
-            <Navbar/>
-            <div className={'content-page'}>
-                <Sidebar/>
-                <AppRouter/>
-            </div>
+            <Suspense fallback="">
+                <Navbar/>
+                <div className={'content-page'}>
+                    <Sidebar/>
+                    <AppRouter/>
+                </div>
+            </Suspense>
         </div>
     );
 };
