@@ -18,7 +18,7 @@ buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
-        new ReactRefreshPlugin(),
+        new ReactRefreshPlugin({ overlay: false }),
         new webpack.HotModuleReplacementPlugin(),
     ];
 }
