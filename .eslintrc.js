@@ -44,9 +44,18 @@ module.exports = {
         'max-len': [2, { ignoreComments: true, code: 100 }],
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
+            ignoreAttribute: ['to'],
         }],
     },
     globals: {
         __IS_DEV__: true,
     },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts, tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
 };
