@@ -7,7 +7,7 @@ import { Button, ButtonSize, ThemeButton } from 'shared/ui/Button/Button';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import MainIcon from 'shared/assets/icons/main.svg';
-import AboutIcon from '../../../../shared/assets/icons/about.svg';
+import AboutIcon from 'shared/assets/icons/about-20-20.svg';
 import cls from './Sidebar.module.scss';
 
 export interface SidebarProps {
