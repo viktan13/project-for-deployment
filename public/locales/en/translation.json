@@ -10,5 +10,7 @@
   "Unexpected mistake occurred": "Unexpected mistake occurred",
   "Reload": "Reload",
   "Short Lang": "En",
-  "Login": "Login"
+  "Login": "Login",
+  "increment": "Increment",
+  "decrement": "Decrement"
 }

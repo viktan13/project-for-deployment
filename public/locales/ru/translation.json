@@ -10,5 +10,7 @@
   "Unexpected mistake occurred": "Непредвиденная ошибка",
   "Reload": "Перегрузить",
   "Short Lang": "Ru",
-  "Login": "Войти"
+  "Login": "Войти",
+  "increment": "Увеличить",
+  "decrement": "Уменьшить"
 }
