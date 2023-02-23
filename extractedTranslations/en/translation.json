@@ -12,5 +12,7 @@
   "Unexpected mistake occurred": "Unexpected mistake occurred",
   "decrement": "decrement",
   "increment": "increment",
-  "language": "language"
+  "language": "language",
+  "password": "password",
+  "username": "username"
 }
