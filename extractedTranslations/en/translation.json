@@ -5,14 +5,19 @@
   "Home": "Home",
   "Home Page": "Home Page",
   "Login": "Login",
+  "Login form": "",
+  "Logout": "Logout",
   "Page Not Found": "Page Not Found",
   "Reload": "Reload",
   "Some Text": "Some Text",
   "Toggle": "Toggle",
   "Unexpected mistake occurred": "Unexpected mistake occurred",
+  "Username or password is not correct": "",
   "decrement": "decrement",
   "increment": "increment",
   "language": "language",
   "password": "password",
-  "username": "username"
+  "username": "username",
+  "Войти": "",
+  "Выйти": ""
 }
