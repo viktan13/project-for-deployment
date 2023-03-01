@@ -17,5 +17,13 @@
   "comments": [
     { "id": 1, "body": "some comment", "postId": 1 }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "name": "Viktor",
+    "lastName": "Dzyuba",
+    "age": 50,
+    "currency": "USD",
+    "city": "Palatine",
+    "username": "admin",
+    "avatar": "https://avatars1.githubusercontent.com/u/1173105?s=400&v=4"
+  }
 }
