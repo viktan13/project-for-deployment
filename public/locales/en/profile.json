@@ -1,6 +1,16 @@
 {
+  "Age": "Your age",
+  "Avatar": "Avatar link",
+  "Cancel": "Cancel",
+  "City": "City",
+  "Country": "Country",
+  "Currency": "Currency",
   "Edit": "Edit",
   "Profile": "Profile",
+  "ProfileTextError": "Try to refresh the page",
+  "ProfileTitleError": "Error while loading the profile",
+  "Save": "Save",
+  "Username": "Username",
   "Your first name": "Your first name",
   "Your last name": "Your last name"
 }

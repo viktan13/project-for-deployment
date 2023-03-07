@@ -1,11 +1,35 @@
 {
   "posts": [
-    { "id": "1", "title": "json-server1", "author": "typicode" },
-    { "id": "2", "title": "json-server2", "author": "typicode" },
-    { "id": "3", "title": "json-server3", "author": "typicode" },
-    { "id": "4", "title": "json-server4", "author": "typicode" },
-    { "id": "5", "title": "json-server5", "author": "typicode" },
-    { "id": "6", "title": "json-server6", "author": "typicode" }
+    {
+      "id": "1",
+      "title": "json-server1",
+      "author": "typicode"
+    },
+    {
+      "id": "2",
+      "title": "json-server2",
+      "author": "typicode"
+    },
+    {
+      "id": "3",
+      "title": "json-server3",
+      "author": "typicode"
+    },
+    {
+      "id": "4",
+      "title": "json-server4",
+      "author": "typicode"
+    },
+    {
+      "id": "5",
+      "title": "json-server5",
+      "author": "typicode"
+    },
+    {
+      "id": "6",
+      "title": "json-server6",
+      "author": "typicode"
+    }
   ],
   "users": [
     {
@@ -15,7 +39,11 @@
     }
   ],
   "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
   ],
   "profile": {
     "name": "Viktor",
@@ -24,6 +52,7 @@
     "currency": "USD",
     "city": "Palatine",
     "username": "admin",
-    "avatar": "https://avatars1.githubusercontent.com/u/1173105?s=400&v=4"
+    "avatar": "https://image.freepik.com/free-vector/hacker-mascot-logo-illustration_317408-106.jpg",
+    "country": "USA"
   }
 }
