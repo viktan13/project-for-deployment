@@ -59,8 +59,7 @@ export const profileSlice = createSlice({
                 state.error = action.payload;
             });
     },
-})
-;
+});
 
 // Action creators are generated for each case reducer function
 export const { actions: profileActions } = profileSlice;
