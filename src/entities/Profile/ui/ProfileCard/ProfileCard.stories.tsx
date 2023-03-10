@@ -24,7 +24,7 @@ Primary.args = {
         currency: Currency.USD,
         city: 'Palatine',
         username: 'admin',
-        avatar,
+        avatar: 'https://image.freepik.com/free-vector/hacker-mascot-logo-illustration_317408-106.jpg',
         country: Country.USA,
 
     },
