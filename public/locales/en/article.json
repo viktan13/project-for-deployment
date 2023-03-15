@@ -1,4 +1,6 @@
 {
+  "Article_Error": "Error while loading the article",
   "Articles": "Articles",
+  "Articles_Not_Found": "The article is not found",
   "Details": "Article details"
 }
