@@ -10,6 +10,7 @@ SERVER_ERROR= 'SERVER_ERROR',
 }
 
 export interface Profile {
+    'id'?: string,
     'name'?: string,
     'lastName'?: string,
     'age'?: number,

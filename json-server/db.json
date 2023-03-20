@@ -19,7 +19,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -100,6 +102,36 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "asdgasgg",
+      "id": "bmBr9Cx"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "asdgasggfhsdhdsh",
+      "id": "Qu6-dc1"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "1354kljlkhlh",
+      "id": "doXngnu"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "Hello world",
+      "id": "EbX5HuT"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "Hello everybody",
+      "id": "10WcleJ"
     }
   ],
   "users": [
@@ -115,17 +147,31 @@
       "username": "user",
       "password": "123",
       "role": "USER",
-      "avatar": "https://image.freepik.com/free-vector/hacker-mascot-logo-illustration_317408-106.jpg"
+      "avatar": "https://tse3.mm.bing.net/th?id=OIP.SFHxhDKpzeiJHCHB9uam_wHaF2&pid=Api&P=0"
     }
   ],
-  "profile": {
-    "name": "John",
-    "lastName": "Smith",
-    "age": 35,
-    "currency": "USD",
-    "city": "Palatine",
-    "username": "admin",
-    "avatar": "https://image.freepik.com/free-vector/hacker-mascot-logo-illustration_317408-106.jpg",
-    "country": "USA"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "name": "Johny",
+      "lastName": "Smith",
+      "age": 40,
+      "currency": "USD",
+      "city": "Palatine",
+      "username": "admin",
+      "avatar": "https://tse4.mm.bing.net/th?id=OIP.9C-0Cr0tc3rls5s5N9GOuQHaE8&pid=Api&P=0",
+      "country": "USA"
+    },
+    {
+      "id": "2",
+      "name": "Erick",
+      "lastName": "Plymouth",
+      "age": 41,
+      "currency": "USD",
+      "city": "Chicago",
+      "username": "user",
+      "avatar": "https://tse3.mm.bing.net/th?id=OIP.SFHxhDKpzeiJHCHB9uam_wHaF2&pid=Api&P=0",
+      "country": "USA"
+    }
+  ]
 }
