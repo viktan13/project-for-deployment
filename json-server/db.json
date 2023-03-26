@@ -637,6 +637,12 @@
       "userId": "1",
       "text": "Hello everybody",
       "id": "10WcleJ"
+    },
+    {
+      "articleId": "2",
+      "userId": "2",
+      "text": "0",
+      "id": "GSVVKMY"
     }
   ],
   "users": [
