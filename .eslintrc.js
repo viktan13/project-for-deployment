@@ -39,11 +39,11 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'max-len': [2, {
             ignoreComments: true,
-            code: 120,
+            code: 140,
         }],
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            ignoreAttribute: ['to', 'data-testid', 'placeholder', 'name'],
+            ignoreAttribute: ['to', 'data-testid', 'placeholder', 'name', 'target'],
         }],
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',

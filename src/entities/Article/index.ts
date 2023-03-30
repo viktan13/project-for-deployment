@@ -5,6 +5,8 @@ export {
 export {
     Article,
     ArticleView,
+    ArticleSortField,
+    ArticleType,
 } from './model/types/article';
 
 export type {
@@ -18,3 +20,11 @@ export {
 export {
     ArticleViewSelector,
 } from './ui/ArticleViewSelector/ArticleViewSelector';
+
+export {
+    ArticlesSortSelector,
+} from './ui/ArticlesSortSelector/ArticlesSortSelector';
+
+export {
+    ArticleTypeTabs,
+} from './ui/ArticleTypeTabs/ArticleTypeTabs';
