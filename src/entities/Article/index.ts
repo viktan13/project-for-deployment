@@ -28,3 +28,7 @@ export {
 export {
     ArticleTypeTabs,
 } from './ui/ArticleTypeTabs/ArticleTypeTabs';
+
+export {
+    articleDetailsData,
+} from './model/selectors/articleDetails';
