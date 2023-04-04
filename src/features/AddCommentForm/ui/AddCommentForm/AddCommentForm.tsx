@@ -9,7 +9,7 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/Dynamic
 import {
     getAddCommentFormError,
     getAddCommentFormText,
-} from 'features/AddCommentForm/model/selectors/addCommentFormSelectors';
+} from '../../model/selectors/addCommentFormSelectors';
 import { addCommentFormActions, addCommentFormReducer } from '../../model/slices/addCommentFormSlice';
 import cls from './AddCommentForm.module.scss';
 
