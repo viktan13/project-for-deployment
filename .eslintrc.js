@@ -60,6 +60,7 @@ module.exports = {
                 'direction',
                 'gap',
                 'role',
+                'as',
             ],
         }],
         'jsx-a11y/no-static-element-interactions': 'off',
