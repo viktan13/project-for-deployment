@@ -19,8 +19,24 @@
     min-width: 100%;
 }
 
-.top {
+.bottomRight {
+    top: 100%;
+    left: 0;
+}
+
+.bottomLeft {
+    top: 100%;
+    right: 0;
+}
+
+.topRight {
     bottom: 100%;
+    left: 0;
+}
+
+.topLeft {
+    bottom: 100%;
+    right: 0;
 }
 
 .item {

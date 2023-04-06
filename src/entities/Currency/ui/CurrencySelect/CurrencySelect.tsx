@@ -35,7 +35,7 @@ export const CurrencySelect = ({
             defaultValue={t('Currency')}
             onChange={onChangeHandler}
             items={options}
-            direction="top"
+            direction="top right"
             label={t('Currency')}
         />
     );

@@ -38,6 +38,7 @@ export const CountrySelect = ({
             items={options}
             readonly={readonly}
             label={t('Country')}
+            direction="top right"
         />
     );
 };

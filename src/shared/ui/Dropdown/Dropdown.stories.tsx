@@ -1,0 +1,32 @@
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Button } from '../Button/Button';
+import { Dropdown } from './Dropdown';
+
+export default {
+    title: 'shared/Dropdown',
+    component: Dropdown,
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
+} as ComponentMeta<typeof Dropdown>;
+
+// @ts-ignore
+const Template: ComponentStory<typeof Dropdown> = (args) => <Dropdown {...args} />;
+
+export const Normal = Template.bind({});
+Normal.args = {
+    trigger: <Button>MORE</Button>,
+    items: [
+        {
+            content: 'first',
+        },
+        {
+            content: 'second',
+        },
+        {
+            content: 'third',
+        },
+
+    ],
+};
