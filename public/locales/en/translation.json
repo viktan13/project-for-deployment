@@ -42,5 +42,6 @@
   "increment": "Increment",
   "language": "English",
   "password": "password",
-  "username": "username"
+  "username": "username",
+  "ArticleListError": "Error while loading articles"
 }

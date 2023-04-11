@@ -42,5 +42,6 @@
   "increment": "Увеличить",
   "language": "Русский",
   "password": "введите пароль",
-  "username": "введите username"
+  "username": "введите username",
+  "ArticleListError": "Ошибка при загрузке списка статей"
 }
