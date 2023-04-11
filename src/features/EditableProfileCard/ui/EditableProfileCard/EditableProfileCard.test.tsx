@@ -5,6 +5,8 @@ import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
 import userEvent from '@testing-library/user-event';
 import { $api } from 'shared/api/api';
+import { Action, Reducer } from '@reduxjs/toolkit';
+import { ProfileSchema } from '../../model/types/editableProfileCardSchema';
 import { profileReducer } from '../../model/profileSlice/profileSlice';
 import { EditableProfileCard } from './EditableProfileCard';
 
@@ -21,8 +23,8 @@ const profile: Profile = {
 
 const options: componentRenderOptions = {
     initialState: {
-        // @ts-ignore
         profile: {
+            isLoading: false,
             readonly: true,
             data: profile,
             form: profile,
@@ -32,20 +34,21 @@ const options: componentRenderOptions = {
         },
     },
     asyncReducers: {
-        // @ts-ignore
-        profile: profileReducer,
+        profile: profileReducer as Reducer<ProfileSchema | undefined, Action<any>>,
     },
 };
 
 describe('features/EditableProfileCard', () => {
-    test('Test switching to edit mode', async () => {
+    beforeEach(() => {
         componentRender(<EditableProfileCard id="1" />, options);
+    });
+
+    test('Test switching to edit mode', async () => {
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
         expect(screen.getByTestId('EditableProfileCardHeader.CancelButton')).toBeInTheDocument();
     });
 
     test('On button Cancel', async () => {
-        componentRender(<EditableProfileCard id="1" />, options);
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
 
         await userEvent.clear(screen.getByTestId('ProfileCardProps.FirstName'));
@@ -65,7 +68,6 @@ describe('features/EditableProfileCard', () => {
     });
 
     test('Validation Error', async () => {
-        componentRender(<EditableProfileCard id="1" />, options);
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
 
         await userEvent.clear(screen.getByTestId('ProfileCardProps.FirstName'));
@@ -77,7 +79,6 @@ describe('features/EditableProfileCard', () => {
 
     test('If no errors the "PUT" request to the server', async () => {
         const mockPutRequest = jest.spyOn($api, 'put');
-        componentRender(<EditableProfileCard id="1" />, options);
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
 
         await userEvent.clear(screen.getByTestId('ProfileCardProps.FirstName'));
