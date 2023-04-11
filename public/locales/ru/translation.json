@@ -43,5 +43,8 @@
   "language": "Русский",
   "password": "введите пароль",
   "username": "введите username",
-  "ArticleListError": "Ошибка при загрузке списка статей"
+  "ArticleListError": "Ошибка при загрузке списка статей",
+  "AdminPanelPage": "Панель администратора",
+  "Admin": "Aдминка",
+  "NotAuthorized": "У вас нет прав для просмотра этой страницы"
 }
