@@ -24,14 +24,6 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
         articleDetailsPage: articleDetailsPageReducer,
     };
 
-    if (!id) {
-        return (
-            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                <h1>{t('Articles_Not_Found')}</h1>
-            </Page>
-        );
-    }
-
     return (
         <DynamicModuleLoader reducers={reducers}>
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>

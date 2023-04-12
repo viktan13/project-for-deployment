@@ -7,9 +7,10 @@ const defaultTheme = localStorage
 
 interface ThemeProviderProps {
     initialTheme?: Theme;
+    children: React.ReactNode;
 }
 
-const ThemeProvider: FC<ThemeProviderProps> = (props) => {
+const ThemeProvider = (props: ThemeProviderProps) => {
     const {
         children,
         initialTheme,

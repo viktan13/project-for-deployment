@@ -14,10 +14,6 @@ const ProfilePage = ({ classname }: ProfilePageProps) => {
 
     const { id } = useParams<{id: string}>();
 
-    if (!id) {
-        return <Text text={t('ProfileTitleError')} />;
-    }
-
     return (
         <Page>
             <VStack max gap="16">

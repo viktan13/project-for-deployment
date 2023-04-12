@@ -39,20 +39,21 @@ export const ArticleList = memo((props: ArticleListProps) => {
     const itemsPerRow = isBig ? 1 : 5;
     const rowCount = isBig ? articles.length : Math.ceil(articles.length / itemsPerRow);
 
-    const rowRenderer = ({
+    const rowRender = ({
         index, key, style,
     }: ListRowProps) => {
         const items = [];
         const fromIndex = index * itemsPerRow;
         const toIndex = Math.min(fromIndex + itemsPerRow, articles.length);
+
         for (let i = fromIndex; i < toIndex; i += 1) {
             items.push(
                 <ArticleListItem
                     article={articles[i]}
                     view={view}
-                    className={cls.card}
                     target={target}
                     key={`str${i}`}
+                    className={cls.card}
                 />,
             );
         }
@@ -76,6 +77,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
     }
 
     return (
+    // @ts-ignore
         <WindowScroller
             scrollElement={document.getElementById(PAGE_ID) as Element}
         >
@@ -88,16 +90,18 @@ export const ArticleList = memo((props: ArticleListProps) => {
                 scrollTop,
             }) => (
                 <div
+                    // @ts-ignore
                     ref={registerChild}
                     className={classNames(cls.ArticleList, {}, [className, cls[view]])}
                 >
                     {virtualized
                         ? (
+                            // @ts-ignore
                             <List
                                 height={height ?? 700}
                                 rowCount={rowCount}
                                 rowHeight={isBig ? 700 : 330}
-                                rowRenderer={rowRenderer}
+                                rowRenderer={rowRender}
                                 width={width ? width - 80 : 700}
                                 autoHeight
                                 onScroll={onChildScroll}
