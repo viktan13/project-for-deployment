@@ -3,10 +3,9 @@ export {
     userActions,
 } from './model/userSlice/userSlice';
 
-export {
+export type {
     User,
     UserSchema,
-    UserRole,
 } from './model/types/user';
 
 export {
@@ -22,3 +21,5 @@ export {
     isUserAdmin,
     isUserManager,
 } from './model/selectors/getUserRoles';
+
+export { UserRole } from './model/consts/userConsts';

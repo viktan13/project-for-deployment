@@ -2,11 +2,9 @@ export {
     ArticleDetails,
 } from './ui/ArticleDetails/ArticleDetails';
 
-export {
+export type {
     Article,
-    ArticleView,
-    ArticleSortField,
-    ArticleType,
+
 } from './model/types/article';
 
 export type {
@@ -32,3 +30,8 @@ export {
 export {
     articleDetailsData,
 } from './model/selectors/articleDetails';
+export {
+    ArticleSortField,
+    ArticleType,
+    ArticleView,
+} from './model/consts/articleConsts';
