@@ -50,3 +50,9 @@
   }
 }
 
+.isClosing {
+  .content {
+    transform: translateY(100%);
+  }
+}
+
