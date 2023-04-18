@@ -1,15 +1,4 @@
-.Dropdown {
-    position: relative;
-}
 
-.btn {
-    background: none;
-    outline: none;
-    border: none;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-}
 
 .menu {
     background: var(--card-bg);
@@ -36,22 +25,4 @@
     border-radius: 8px;
 }
 
-.bottomRight {
-    top: 100%;
-    left: 0;
-}
 
-.bottomLeft {
-    top: 100%;
-    right: 0;
-}
-
-.topRight {
-    bottom: 100%;
-    left: 0;
-}
-
-.topLeft {
-    bottom: 100%;
-    right: 0;
-}
