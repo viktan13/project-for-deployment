@@ -36,5 +36,7 @@ export default ({ config }: {config: webpack.Configuration}) => {
         __PROJECT__: JSON.stringify('storybook'),
     }));
 
+    config!.resolve!.alias = { '@': path.resolve(__dirname, '..', '..', 'src') };
+
     return config;
 };
