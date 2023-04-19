@@ -1,15 +1,15 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { useLocation } from 'react-router-dom';
 import {
     memo, MutableRefObject, ReactNode, useRef, UIEvent,
 } from 'react';
-import { useInifiniteScroll } from 'shared/lib/hooks/useInifiniteScroll/useInifiniteScroll';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { getUIScrollByPath, uiActions } from 'features/UI';
-import { useLocation } from 'react-router-dom';
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useSelector } from 'react-redux';
-import { StateSchema } from 'app/providers/StoreProvider';
-import { useThrottle } from 'shared/lib/hooks/useThrottle/useThrottle';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { useInifiniteScroll } from '@/shared/lib/hooks/useInifiniteScroll/useInifiniteScroll';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { getUIScrollByPath, uiActions } from '@/features/UI';
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { StateSchema } from '@/app/providers/StoreProvider';
+import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle';
 import cls from './Page.module.scss';
 
 export interface PageProps {

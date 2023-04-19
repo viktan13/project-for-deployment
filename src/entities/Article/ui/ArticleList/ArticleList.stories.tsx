@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from '@/app/providers/ThemeProvider';
 import { ArticleView } from '../../model/consts/articleConsts';
 import { Article } from '../../model/types/article';
 import { ArticleList } from './ArticleList';
@@ -122,7 +122,6 @@ ListSmall.args = {
         })),
     isLoading: false,
     view: ArticleView.SMALL,
-    virtualized: false,
 };
 
 export const ListBig = Template.bind({});
@@ -135,5 +134,4 @@ ListBig.args = {
         })),
     isLoading: false,
     view: ArticleView.BIG,
-    virtualized: false,
 };

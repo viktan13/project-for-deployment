@@ -22,7 +22,7 @@
     // console.log(Moment);
     "baseUrl": ".",
     "paths": {
-      "*": ["./src/*"]
+      "@/*": ["./src/*"]
     },
     "esModuleInterop": true,
     // Если какая-либо библиотека не имеет default import,

@@ -1,7 +1,7 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Text, TextTheme } from 'shared/ui/Text/Text';
-import { Page } from 'widgets/Page/Page';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Text, TextTheme } from '@/shared/ui/Text/Text';
+import { Page } from '@/widgets/Page/Page';
 
 export interface ForbiddenPageProps {
     className?: string
