@@ -49,5 +49,8 @@
   "NotAuthorized": "You are not authorized to view this page",
   "YourFeedback": "Your feedback",
   "Cancel": "Cancel",
-  "Accept": "Send feedback"
+  "Accept": "Send feedback",
+  "LeaveRating": "Rate the article",
+  "Feedback": "Leave feedback to improve the article",
+  "ThankRating": "Thank you for your rating"
 }
