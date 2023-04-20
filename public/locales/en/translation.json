@@ -46,5 +46,8 @@
   "ArticleListError": "Error while loading articles",
   "AdminPanelPage": "Admin Panel",
   "Admin": "Admin",
-  "NotAuthorized": "You are not authorized to view this page"
+  "NotAuthorized": "You are not authorized to view this page",
+  "YourFeedback": "Your feedback",
+  "Cancel": "Cancel",
+  "Accept": "Send feedback"
 }
