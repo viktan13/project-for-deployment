@@ -4,6 +4,8 @@ import { Page } from '@/widgets/Page/Page';
 import { VStack } from '@/shared/ui/Stack/VStack/VStack';
 import { EditableProfileCard } from '@/features/EditableProfileCard';
 import { Text } from '@/shared/ui/Text/Text';
+import { RatingCard } from '@/entities/Rating';
+import { ProfileRating } from '@/features/ProfileRating';
 
 export interface ProfilePageProps {
     classname?: string
@@ -14,10 +16,13 @@ const ProfilePage = ({ classname }: ProfilePageProps) => {
 
     const { id } = useParams<{id: string}>();
 
+    if (!id) return null;
+
     return (
         <Page>
             <VStack max gap="16">
                 <EditableProfileCard id={id} />
+                <ProfileRating profileId={id} />
             </VStack>
         </Page>
     );

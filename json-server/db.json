@@ -730,22 +730,39 @@
       "articleId": "6",
       "rate": 4,
       "id": "uYCLGW1"
+    },
+    {
+      "userId": "1",
+      "articleId": "12",
+      "rate": 3,
+      "id": "4F0B-Np"
+    },
+    {
+      "userId": "1",
+      "articleId": "19",
+      "rate": 5,
+      "feedback": "Very good",
+      "id": "CCBsgQd"
+    },
+    {
+      "userId": "1",
+      "articleId": "15",
+      "rate": 3,
+      "id": "OvDMgEP"
     }
   ],
   "profile-ratings": [
     {
-      "id": "1",
-      "rate": 4,
-      "feedback": "Хорошая статья",
+      "profileId": "1",
       "userId": "1",
-      "profileId": "1"
+      "rate": 4,
+      "id": "mxX8anF"
     },
     {
-      "id": "2",
-      "rate": 4,
-      "feedback": "Хорошая статья",
+      "profileId": "2",
       "userId": "1",
-      "profileId": "2"
+      "rate": 4,
+      "id": "77yQrOE"
     }
   ]
 }

@@ -52,5 +52,7 @@
   "Accept": "Send feedback",
   "LeaveRating": "Rate the article",
   "Feedback": "Leave feedback to improve the article",
-  "ThankRating": "Thank you for your rating"
+  "ThankRating": "Thank you for your rating",
+  "RateProfile": "Rate the profile",
+  "ProfileFeedback": "Leave feedback to improve the profile"
 }
