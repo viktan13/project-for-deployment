@@ -3,6 +3,8 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { EditableProfileCard } from './EditableProfileCard';
+import { Currency } from '@/entities/Currency';
+import { Country } from '@/entities/Country';
 
 export default {
     title: 'features/EditableProfileCard/EditableProfileCard',
@@ -18,4 +20,16 @@ export const Normal = Template.bind({});
 Normal.args = {
 
 };
-Normal.decorators = [StoreDecorator({})];
+Normal.decorators = [StoreDecorator({
+    profile: {
+        form: {
+            name: 'Viktor',
+            lastName: 'Dzyuba',
+            age: 50,
+            currency: Currency.USD,
+            city: 'Palatine',
+            username: 'admin',
+            country: Country.USA,
+        },
+    },
+})];

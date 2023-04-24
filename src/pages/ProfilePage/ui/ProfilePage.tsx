@@ -3,8 +3,6 @@ import { useParams } from 'react-router-dom';
 import { Page } from '@/widgets/Page/Page';
 import { VStack } from '@/shared/ui/Stack/VStack/VStack';
 import { EditableProfileCard } from '@/features/EditableProfileCard';
-import { Text } from '@/shared/ui/Text/Text';
-import { RatingCard } from '@/entities/Rating';
 import { ProfileRating } from '@/features/ProfileRating';
 
 export interface ProfilePageProps {

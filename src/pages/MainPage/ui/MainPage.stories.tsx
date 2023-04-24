@@ -6,7 +6,7 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDe
 import MainPage from './MainPage';
 
 export default {
-    title: 'pages/MainPage',
+    title: 'pages/MainPage/MainPage',
     component: MainPage,
     argTypes: {
         backgroundColor: { control: 'color' },

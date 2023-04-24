@@ -6,7 +6,7 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDe
 import { NotFoundPage } from './NotFoundPage';
 
 export default {
-    title: 'pages/NotFoundPage',
+    title: 'pages/NotFoundPage/NotFoundPage',
     component: NotFoundPage,
     argTypes: {
         backgroundColor: { control: 'color' },

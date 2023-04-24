@@ -18,7 +18,7 @@ const article: Article = {
 };
 
 export default {
-    title: 'features/ArticleRecommendationsList',
+    title: 'features/ArticleRecomendationsList/ArticleRecommendationsList',
     component: ArticleRecommendationsList,
     argTypes: {
         backgroundColor: { control: 'color' },

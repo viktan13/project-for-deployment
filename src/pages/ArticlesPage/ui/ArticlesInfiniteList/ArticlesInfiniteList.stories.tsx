@@ -4,7 +4,7 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDe
 import { ArticlesInfiniteList } from './ArticlesInfiniteList';
 
 export default {
-    title: 'pages/ArticlesInfiniteList',
+    title: 'pages/ArticlesPage/ArticlesInfiniteList',
     component: ArticlesInfiniteList,
     argTypes: {
         backgroundColor: { control: 'color' },
