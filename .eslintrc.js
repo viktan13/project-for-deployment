@@ -72,7 +72,13 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'viktan-plugin/path-checker': ['error', { alias: '@' }],
-        'viktan-plugin/public-api-imports': ['error', { alias: '@' }],
+        'viktan-plugin/public-api-imports': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,
