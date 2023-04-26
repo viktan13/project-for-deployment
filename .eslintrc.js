@@ -72,6 +72,13 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'viktan-plugin/path-checker': ['error', { alias: '@' }],
+        'viktan-plugin/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            },
+        ],
         'viktan-plugin/public-api-imports': [
             'error',
             {
