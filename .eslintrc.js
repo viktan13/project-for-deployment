@@ -24,6 +24,7 @@ module.exports = {
         'i18next',
         'react-hooks',
         'viktan-plugin',
+        'unused-imports',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -71,6 +72,7 @@ module.exports = {
         'no-param-reassign': 'off',
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
+        'unused-imports/no-unused-imports': 'error',
         'viktan-plugin/path-checker': ['error', { alias: '@' }],
         'viktan-plugin/layer-imports': [
             'error',
