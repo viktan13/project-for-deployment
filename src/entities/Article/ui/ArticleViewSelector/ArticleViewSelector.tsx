@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import TileIcon from '@/shared/assets/icons/tile.svg';
 import ListIcon from '@/shared/assets/icons/list.svg';
-import { Button, ThemeButton } from '@/shared/ui/Button/Button';
-import { Icon } from '@/shared/ui/Icon/Icon';
+import { Button, ThemeButton } from '@/shared/ui/Button';
+import { Icon } from '@/shared/ui/Icon';
 import { ArticleView } from '../../model/consts/articleConsts';
 import cls from './ArticleViewSelector.module.scss';
 

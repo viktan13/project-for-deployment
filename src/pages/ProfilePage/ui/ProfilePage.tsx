@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { Page } from '@/widgets/Page';
-import { VStack } from '@/shared/ui/Stack/VStack/VStack';
+import { VStack } from '@/shared/ui/Stack';
 import { EditableProfileCard } from '@/features/EditableProfileCard';
 import { ProfileRating } from '@/features/ProfileRating';
 
