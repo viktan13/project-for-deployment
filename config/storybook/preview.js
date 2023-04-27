@@ -13,6 +13,7 @@ export const parameters = {
             date: /Date$/,
         },
     },
+    layout: 'full screen',
 };
 
 addDecorator(StyleDecorator);
