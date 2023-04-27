@@ -16,18 +16,6 @@ export {
 } from './ui/ArticleList/ArticleList';
 
 export {
-    ArticleViewSelector,
-} from './ui/ArticleViewSelector/ArticleViewSelector';
-
-export {
-    ArticlesSortSelector,
-} from './ui/ArticlesSortSelector/ArticlesSortSelector';
-
-export {
-    ArticleTypeTabs,
-} from './ui/ArticleTypeTabs/ArticleTypeTabs';
-
-export {
     articleDetailsData,
 } from './model/selectors/articleDetails';
 export {
