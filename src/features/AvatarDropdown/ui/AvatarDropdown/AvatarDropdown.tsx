@@ -18,6 +18,7 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
     const { className } = props;
     const { t } = useTranslation();
     const authData = useSelector(getUserAuthData);
+    console.log('authData', authData);
 
     const dispatch = useDispatch();
     const isAdmin = useSelector(isUserAdmin);
@@ -47,7 +48,7 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
                     onClick: onLogout,
                 },
             ]}
-            trigger={<Avatar size={30} src={authData.avatar} />}
+            trigger={<Avatar fallbackInverted size={30} src={authData.avatar} />}
         />
     );
 });
