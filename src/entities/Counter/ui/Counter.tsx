@@ -27,7 +27,7 @@ export const Counter = () => {
             </h1>
             <Button data-testid="increment-btn" onClick={handleInc}>{t('increment')}</Button>
             <Button data-testid="decrement-btn" onClick={handleDec}>{t('decrement')}</Button>
-            <Button data-testid="decrement-btn" onClick={handleAdd}>{t('add 5')}</Button>
+            <Button data-testid="add-btn" onClick={handleAdd}>{t('add 5')}</Button>
         </div>
     );
 };
