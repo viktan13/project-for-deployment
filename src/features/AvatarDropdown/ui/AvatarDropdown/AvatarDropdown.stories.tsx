@@ -21,7 +21,7 @@ Normal.decorators = [
         user: {
             authData: {
                 id: '1',
-                avatar: 'https://i.pravatar.cc/300',
+                avatar: 'https://tse4.mm.bing.net/th?id=OIP.9C-0Cr0tc3rls5s5N9GOuQHaE8&pid=Api&P=0',
             },
         },
     }),
@@ -34,7 +34,7 @@ Admin.decorators = [
         user: {
             authData: {
                 id: '1',
-                avatar: 'https://i.pravatar.cc/300',
+                avatar: 'https://tse4.mm.bing.net/th?id=OIP.9C-0Cr0tc3rls5s5N9GOuQHaE8&pid=Api&P=0',
                 roles: [
                     // @ts-ignore
                     'ADMIN',
