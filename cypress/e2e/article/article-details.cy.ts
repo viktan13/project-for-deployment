@@ -35,4 +35,11 @@ describe('User opens the page with the article', () => {
         cy.setRating(5, 'feedback');
         cy.get('[data-selected=true]').should('have.length', 5);
     });
+
+    it('and gives a rating to the article using stabs (fixtures)', () => {
+        cy.intercept('GET', 'articles/*', { fixture: 'article-details.json' });
+        cy.getByTestId('RatingCard').scrollIntoView();
+        cy.setRating(5, 'feedback');
+        cy.get('[data-selected=true]').should('have.length', 5);
+    });
 });
