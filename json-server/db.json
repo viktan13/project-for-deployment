@@ -676,6 +676,17 @@
       "username": "user",
       "avatar": "https://tse3.mm.bing.net/th?id=OIP.SFHxhDKpzeiJHCHB9uam_wHaF2&pid=Api&P=0",
       "country": "USA"
+    },
+    {
+      "id": "3",
+      "name": "test",
+      "lastName": "lastname",
+      "age": 41,
+      "currency": "USD",
+      "city": "Chicago",
+      "username": "testuser",
+      "avatar": "https://tse3.mm.bing.net/th?id=OIP.SFHxhDKpzeiJHCHB9uam_wHaF2&pid=Api&P=0",
+      "country": "USA"
     }
   ],
   "article-ratings": [
