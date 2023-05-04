@@ -15,10 +15,11 @@ export const buildSlice = <
     const useActions = (): typeof slice.actions => {
         const dispatch = useDispatch();
         // @ts-ignore
-        return useMemo(() => {
+        return useMemo(
             // @ts-ignore
-            bindActionCreators(slice.actions, dispatch);
-        }, [dispatch]);
+            () => bindActionCreators(slice.actions, dispatch),
+            [dispatch],
+        );
     };
 
     return {
