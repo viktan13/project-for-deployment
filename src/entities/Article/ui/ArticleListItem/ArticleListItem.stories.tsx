@@ -1,9 +1,11 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ArticleBlockType, ArticleType, ArticleView } from '../../model/consts/articleConsts';
 import {
-    Article,
-} from '../../model/types/article';
+    ArticleBlockType,
+    ArticleType,
+    ArticleView,
+} from '../../model/consts/articleConsts';
+import { Article } from '../../model/types/article';
 import { ArticleListItem } from './ArticleListItem';
 
 const article: Article = {
@@ -89,7 +91,9 @@ export default {
 } as ComponentMeta<typeof ArticleListItem>;
 
 // @ts-ignore
-const Template: ComponentStory<typeof ArticleListItem> = (args) => <ArticleListItem {...args} />;
+const Template: ComponentStory<typeof ArticleListItem> = (args) => (
+    <ArticleListItem {...args} />
+);
 
 export const Big = Template.bind({});
 Big.args = {

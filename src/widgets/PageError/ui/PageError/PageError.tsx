@@ -3,7 +3,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './PageError.module.scss';
 
 export interface PageErrorProps {
-    className?: string
+    className?: string;
 }
 
 export const PageError = ({ className }: PageErrorProps) => {
@@ -16,7 +16,12 @@ export const PageError = ({ className }: PageErrorProps) => {
     return (
         <div className={classNames(cls.PageError, {}, [className])}>
             <h1>{t('Unexpected mistake occurred')}</h1>
-            <button onClick={refreshPage} type="button">{t('Reload')}</button>
+            <button
+                onClick={refreshPage}
+                type="button"
+            >
+                {t('Reload')}
+            </button>
         </div>
     );
 };

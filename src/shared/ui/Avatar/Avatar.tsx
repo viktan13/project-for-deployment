@@ -23,13 +23,29 @@ export const Avatar = ({
 }: AvatarProps) => {
     const mods: Mods = {};
 
-    const style = useMemo<CSSProperties>(() => ({
-        width: size,
-        height: size,
-    }), [size]);
+    const style = useMemo<CSSProperties>(
+        () => ({
+            width: size,
+            height: size,
+        }),
+        [size],
+    );
 
-    const fallback = <Skeleton width={size} height={size} border="50%" />;
-    const errorFallback = <Icon inverted={fallbackInverted} width={size} height={size} SVG={UserIcon} />;
+    const fallback = (
+        <Skeleton
+            width={size}
+            height={size}
+            border="50%"
+        />
+    );
+    const errorFallback = (
+        <Icon
+            inverted={fallbackInverted}
+            width={size}
+            height={size}
+            SVG={UserIcon}
+        />
+    );
     return (
         <AppImage
             fallback={fallback}

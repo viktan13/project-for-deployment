@@ -26,11 +26,7 @@ const viewTypes = [
 ];
 
 export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
-    const {
-        className,
-        view,
-        onViewClick,
-    } = props;
+    const { className, view, onViewClick } = props;
     const { t } = useTranslation();
 
     const onClick = (newView: ArticleView) => () => {
@@ -40,10 +36,18 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
     return (
         <div className={classNames(cls.ArticleViewSelector, {}, [className])}>
             {viewTypes.map((viewType) => (
-                <Button key={viewType.view} theme={ThemeButton.CLEAR} onClick={onClick(viewType.view)}>
+                <Button
+                    key={viewType.view}
+                    theme={ThemeButton.CLEAR}
+                    onClick={onClick(viewType.view)}
+                >
                     <Icon
                         SVG={viewType.icon}
-                        className={classNames('', { [cls.notSelected]: viewType.view !== view }, [cls.icon])}
+                        className={classNames(
+                            '',
+                            { [cls.notSelected]: viewType.view !== view },
+                            [cls.icon],
+                        )}
                     />
                 </Button>
             ))}

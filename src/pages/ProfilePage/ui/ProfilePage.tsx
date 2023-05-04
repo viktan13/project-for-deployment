@@ -6,19 +6,22 @@ import { EditableProfileCard } from '@/features/EditableProfileCard';
 import { ProfileRating } from '@/features/ProfileRating';
 
 export interface ProfilePageProps {
-    classname?: string
+    classname?: string;
 }
 
 const ProfilePage = ({ classname }: ProfilePageProps) => {
     const { t } = useTranslation('profile');
 
-    const { id } = useParams<{id: string}>();
+    const { id } = useParams<{ id: string }>();
 
     if (!id) return null;
 
     return (
         <Page data-testid="ProfilePage">
-            <VStack max gap="16">
+            <VStack
+                max
+                gap="16"
+            >
                 <EditableProfileCard id={id} />
                 <ProfileRating profileId={id} />
             </VStack>

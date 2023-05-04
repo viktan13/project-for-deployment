@@ -9,8 +9,8 @@ export const getQueryParams = (params: OptionalRecord<string, string>) => {
 };
 
 /*
-* Function that adds params into url string
-* @param params
+ * Function that adds params into url string
+ * @param params
  */
 
 export const addQueryParams = (params: OptionalRecord<string, string>) => {

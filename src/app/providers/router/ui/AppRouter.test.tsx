@@ -1,7 +1,11 @@
 import { screen } from '@testing-library/react';
 import { componentRender } from '@/shared/lib/tests/componentsRender/componentRender';
 import AppRouter from './AppRouter';
-import { getRouteAbout, getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
+import {
+    getRouteAbout,
+    getRouteAdminPanel,
+    getRouteProfile,
+} from '@/shared/const/router';
 import { UserRole } from '@/entities/User';
 
 describe('app/router/AppRouter', () => {
@@ -63,7 +67,11 @@ describe('app/router/AppRouter', () => {
             initialState: {
                 user: {
                     _inited: true,
-                    authData: { id: '1', username: 'test', roles: [UserRole.ADMIN] },
+                    authData: {
+                        id: '1',
+                        username: 'test',
+                        roles: [UserRole.ADMIN],
+                    },
                 },
             },
         });

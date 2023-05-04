@@ -11,9 +11,14 @@ export default {
     },
     decorators: [
         (Story) => (
-            <div style={{
-                width: '100%', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center',
-            }}
+            <div
+                style={{
+                    width: '100%',
+                    height: '100vh',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }}
             >
                 <Story />
             </div>
@@ -22,7 +27,9 @@ export default {
 } as ComponentMeta<typeof Dropdown>;
 
 // @ts-ignore
-const Template: ComponentStory<typeof Dropdown> = (args) => <Dropdown {...args} />;
+const Template: ComponentStory<typeof Dropdown> = (args) => (
+    <Dropdown {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {
@@ -37,7 +44,6 @@ Normal.args = {
         {
             content: 'third',
         },
-
     ],
 };
 
@@ -55,7 +61,6 @@ DisabledMenuItem.args = {
         {
             content: 'third',
         },
-
     ],
 };
 
@@ -73,7 +78,6 @@ BottomRight.args = {
         {
             content: 'third',
         },
-
     ],
 };
 
@@ -91,7 +95,6 @@ BottomLeft.args = {
         {
             content: 'third',
         },
-
     ],
 };
 
@@ -109,7 +112,6 @@ TopLeft.args = {
         {
             content: 'third',
         },
-
     ],
 };
 
@@ -127,6 +129,5 @@ TopRight.args = {
         {
             content: 'third',
         },
-
     ],
 };

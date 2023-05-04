@@ -14,7 +14,9 @@ export default {
 } as ComponentMeta<typeof AboutPage>;
 
 // @ts-ignore
-const Template: ComponentStory<typeof AboutPage> = (args) => <AboutPage {...args} />;
+const Template: ComponentStory<typeof AboutPage> = (args: any) => (
+    <AboutPage {...args} />
+);
 
 export const Dark = Template.bind({});
 Dark.args = {};

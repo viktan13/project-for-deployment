@@ -1,23 +1,12 @@
-export {
-    ArticleDetails,
-} from './ui/ArticleDetails/ArticleDetails';
+export { ArticleDetails } from './ui/ArticleDetails/ArticleDetails';
 
-export type {
-    Article,
+export type { Article } from './model/types/article';
 
-} from './model/types/article';
+export type { ArticleDetailsSchema } from './model/types/articleDetailsSchema';
 
-export type {
-    ArticleDetailsSchema,
-} from './model/types/articleDetailsSchema';
+export { ArticleList } from './ui/ArticleList/ArticleList';
 
-export {
-    ArticleList,
-} from './ui/ArticleList/ArticleList';
-
-export {
-    articleDetailsData,
-} from './model/selectors/articleDetails';
+export { articleDetailsData } from './model/selectors/articleDetails';
 export {
     ArticleSortField,
     ArticleType,

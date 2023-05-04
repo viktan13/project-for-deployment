@@ -5,7 +5,10 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Avatar } from '@/shared/ui/Avatar';
 import { Dropdown } from '@/shared/ui/Popups';
 import {
-    getUserAuthData, isUserAdmin, isUserManager, userActions,
+    getUserAuthData,
+    isUserAdmin,
+    isUserManager,
+    userActions,
 } from '@/entities/User';
 import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
 
@@ -33,10 +36,14 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
             className={classNames('', {}, [className])}
             direction="bottom left"
             items={[
-                ...(isAdminPanelAvailable ? [{
-                    content: t('Admin'),
-                    href: getRouteAdminPanel(),
-                }] : []),
+                ...(isAdminPanelAvailable
+                    ? [
+                          {
+                              content: t('Admin'),
+                              href: getRouteAdminPanel(),
+                          },
+                      ]
+                    : []),
                 {
                     content: t('Profile'),
                     href: getRouteProfile(authData.id),
@@ -46,7 +53,13 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
                     onClick: onLogout,
                 },
             ]}
-            trigger={<Avatar fallbackInverted size={30} src={authData.avatar} />}
+            trigger={
+                <Avatar
+                    fallbackInverted
+                    size={30}
+                    src={authData.avatar}
+                />
+            }
         />
     );
 });

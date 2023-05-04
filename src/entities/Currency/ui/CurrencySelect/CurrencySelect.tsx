@@ -18,13 +18,19 @@ const options = [
 ];
 
 export const CurrencySelect = ({
-    className, value, onChange, readonly,
+    className,
+    value,
+    onChange,
+    readonly,
 }: CurrencySelectProps) => {
     const { t } = useTranslation('profile');
 
-    const onChangeHandler = useCallback((value: string) => {
-        onChange?.(value as Currency);
-    }, [onChange]);
+    const onChangeHandler = useCallback(
+        (value: string) => {
+            onChange?.(value as Currency);
+        },
+        [onChange],
+    );
 
     return (
         <ListBox

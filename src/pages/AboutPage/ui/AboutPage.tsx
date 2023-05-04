@@ -7,9 +7,7 @@ const AboutPage = () => {
 
     return (
         <Page data-testid="AboutPage">
-            <h1>
-                {t('About Page')}
-            </h1>
+            <h1>{t('About Page')}</h1>
         </Page>
     );
 };

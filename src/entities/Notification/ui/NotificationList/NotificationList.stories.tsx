@@ -14,7 +14,9 @@ export default {
 } as ComponentMeta<typeof NotificationList>;
 
 // @ts-ignore
-const Template: ComponentStory<typeof NotificationList> = (args) => <NotificationList {...args} />;
+const Template: ComponentStory<typeof NotificationList> = (args) => (
+    <NotificationList {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {};

@@ -11,7 +11,7 @@ import { getSidebarItemsList } from '../../model/selectors/getSidebarItemsList';
 import cls from './Sidebar.module.scss';
 
 export interface SidebarProps {
-    className?: string
+    className?: string;
 }
 
 export const Sidebar = memo(({ className }: SidebarProps) => {
@@ -25,13 +25,9 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
 
     return (
         <aside
-            className={
-                classNames(
-                    cls.Sidebar,
-                    { [cls.collapsed]: collapsed },
-                    [className],
-                )
-            }
+            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
+                className,
+            ])}
             data-testid="sidebar"
         >
             <Button
@@ -44,7 +40,11 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
             >
                 {t(collapsed ? '>' : '<')}
             </Button>
-            <VStack role="navigation" gap="8" className={cls.items}>
+            <VStack
+                role="navigation"
+                gap="8"
+                className={cls.items}
+            >
                 {sidebarItemsList.map((item) => (
                     <SidebarItem
                         key={item.path}
@@ -55,7 +55,10 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
             </VStack>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
-                <LangSwitcher short={collapsed} className={cls.lang} />
+                <LangSwitcher
+                    short={collapsed}
+                    className={cls.lang}
+                />
             </div>
         </aside>
     );

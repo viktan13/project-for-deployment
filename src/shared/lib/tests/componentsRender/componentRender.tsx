@@ -35,12 +35,13 @@ export const TestProvider = (props: TestProviderProps) => {
 
     return (
         <MemoryRouter initialEntries={[route]}>
-            <StoreProvider asyncReducers={asyncReducers} initialState={initialState}>
+            <StoreProvider
+                asyncReducers={asyncReducers}
+                initialState={initialState}
+            >
                 <I18nextProvider i18n={i18nForTests}>
                     <ThemeProvider initialTheme={theme}>
-                        <div className={`app ${theme}`}>
-                            {children}
-                        </div>
+                        <div className={`app ${theme}`}>{children}</div>
                     </ThemeProvider>
                 </I18nextProvider>
             </StoreProvider>
@@ -48,8 +49,9 @@ export const TestProvider = (props: TestProviderProps) => {
     );
 };
 
-export const componentRender = (component: ReactNode, options: componentRenderOptions = {}) => {
-    render(
-        <TestProvider options={options}>{component}</TestProvider>,
-    );
+export const componentRender = (
+    component: ReactNode,
+    options: componentRenderOptions = {},
+) => {
+    render(<TestProvider options={options}>{component}</TestProvider>);
 };

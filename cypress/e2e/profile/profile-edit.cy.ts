@@ -14,15 +14,27 @@ describe('User opens the profile page', () => {
     });
 
     it('profile renders successfully', () => {
-        cy.getByTestId('ProfileCardProps.FirstName').should('have.value', 'test');
-        cy.getByTestId('ProfileCardProps.LastName').should('have.value', 'lastname');
+        cy.getByTestId('ProfileCardProps.FirstName').should(
+            'have.value',
+            'test',
+        );
+        cy.getByTestId('ProfileCardProps.LastName').should(
+            'have.value',
+            'lastname',
+        );
     });
 
     it('and edits the profile', () => {
         const newFirstName = 'newFirstName';
         const newLastName = 'newLastName';
         cy.updateProfile(newFirstName, newLastName);
-        cy.getByTestId('ProfileCardProps.FirstName').should('have.value', newFirstName);
-        cy.getByTestId('ProfileCardProps.LastName').should('have.value', newLastName);
+        cy.getByTestId('ProfileCardProps.FirstName').should(
+            'have.value',
+            newFirstName,
+        );
+        cy.getByTestId('ProfileCardProps.LastName').should(
+            'have.value',
+            newLastName,
+        );
     });
 });

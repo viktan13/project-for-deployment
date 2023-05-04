@@ -31,5 +31,5 @@ Normal.args = {
         },
     ],
     value: 'tab2',
-    onTabClick: (action('onTabClick')),
+    onTabClick: action('onTabClick'),
 };

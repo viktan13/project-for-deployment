@@ -4,7 +4,7 @@ import { Text, TextTheme } from '@/shared/ui/Text';
 import { Page } from '@/widgets/Page';
 
 export interface ForbiddenPageProps {
-    className?: string
+    className?: string;
 }
 
 const ForbiddenPage = ({ className }: ForbiddenPageProps) => {
@@ -14,7 +14,10 @@ const ForbiddenPage = ({ className }: ForbiddenPageProps) => {
             data-testid="ForbiddenPage"
             className={classNames('', {}, [className])}
         >
-            <Text theme={TextTheme.ERROR} title={t('NotAuthorized')} />
+            <Text
+                theme={TextTheme.ERROR}
+                title={t('NotAuthorized')}
+            />
         </Page>
     );
 };

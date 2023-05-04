@@ -1,8 +1,8 @@
 {
-  "Article_Error": "Произошла ошибка при загрузке статьи",
-  "Articles": "Статьи",
-  "Articles_Not_Found": "Статья не найдена",
-  "Comments": "Комментарии",
-  "Details": "Детали статьи",
-  "Recommendation": "Рекомендуем"
+    "Article_Error": "Произошла ошибка при загрузке статьи",
+    "Articles": "Статьи",
+    "Articles_Not_Found": "Статья не найдена",
+    "Comments": "Комментарии",
+    "Details": "Детали статьи",
+    "Recommendation": "Рекомендуем"
 }

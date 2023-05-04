@@ -9,6 +9,7 @@ module.exports = {
         'airbnb',
         'plugin:i18next/recommended',
         'plugin:storybook/recommended',
+        'plugin:prettier/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -25,14 +26,19 @@ module.exports = {
         'react-hooks',
         'viktan-plugin',
         'unused-imports',
+        'prettier',
     ],
     rules: {
-        'react/jsx-indent': [2, 4],
-        'react/jsx-indent-props': [2, 4],
-        indent: [2, 4],
-        'react/jsx-filename-extension': [2, {
-            extensions: ['.js', '.jsx', '.tsx'],
-        }],
+        'prettier/prettier': 'error',
+        // 'react/jsx-indent': [2, 4],
+        // 'react/jsx-indent-props': [2, 4], // disabling this rule while start using prettier
+        // indent: [2, 4],
+        'react/jsx-filename-extension': [
+            2,
+            {
+                extensions: ['.js', '.jsx', '.tsx'],
+            },
+        ],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'warn',
@@ -44,27 +50,33 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
-        'max-len': [2, {
-            ignoreComments: true,
-            code: 140,
-        }],
-        'i18next/no-literal-string': ['error', {
-            markupOnly: true,
-            ignoreAttribute: [
-                'to',
-                'data-testid',
-                'placeholder',
-                'name',
-                'target',
-                'justify',
-                'align',
-                'border',
-                'direction',
-                'gap',
-                'role',
-                'as',
-            ],
-        }],
+        'max-len': [
+            2,
+            {
+                ignoreComments: true,
+                code: 140,
+            },
+        ],
+        'i18next/no-literal-string': [
+            'error',
+            {
+                markupOnly: true,
+                ignoreAttribute: [
+                    'to',
+                    'data-testid',
+                    'placeholder',
+                    'name',
+                    'target',
+                    'justify',
+                    'align',
+                    'border',
+                    'direction',
+                    'gap',
+                    'role',
+                    'as',
+                ],
+            },
+        ],
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
         'react-hooks/rules-of-hooks': 'error',
@@ -85,7 +97,11 @@ module.exports = {
             'error',
             {
                 alias: '@',
-                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+                testFilesPatterns: [
+                    '**/*.test.*',
+                    '**/*.story.*',
+                    '**/StoreDecorator.tsx',
+                ],
             },
         ],
     },
@@ -94,11 +110,13 @@ module.exports = {
         __API__: true,
         __PROJECT__: true,
     },
-    overrides: [{
-        files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
-        rules: {
-            'i18next/no-literal-string': 'off',
-            'max-len': 'off',
+    overrides: [
+        {
+            files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+                'max-len': 'off',
+            },
         },
-    }],
+    ],
 };

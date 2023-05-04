@@ -20,13 +20,19 @@ const options = [
 ];
 
 export const CountrySelect = ({
-    className, value, onChange, readonly,
+    className,
+    value,
+    onChange,
+    readonly,
 }: CountrySelectProps) => {
     const { t } = useTranslation('profile');
 
-    const onChangeHandler = useCallback((value: string) => {
-        onChange?.(value as Country);
-    }, [onChange]);
+    const onChangeHandler = useCallback(
+        (value: string) => {
+            onChange?.(value as Country);
+        },
+        [onChange],
+    );
 
     return (
         <ListBox

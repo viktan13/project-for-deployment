@@ -38,26 +38,23 @@ export function ListBox(props: ListBoxProps) {
         label,
     } = props;
 
-    const optionsClass = [
-        mapDirectionToClass[direction],
-    ];
+    const optionsClass = [mapDirectionToClass[direction]];
 
     return (
         <HStack gap="8">
             {label && <Text text={`${label}>`} />}
             <HListbox
                 disabled={readonly}
-                className={classNames(cls.ListBox, {}, [className, popupCls.popup])}
+                className={classNames(cls.ListBox, {}, [
+                    className,
+                    popupCls.popup,
+                ])}
                 as="div"
                 value={value}
                 onChange={onChange}
             >
-                <HListbox.Button
-                    className={cls.trigger}
-                >
-                    <Button disabled={readonly}>
-                        {value ?? defaultValue}
-                    </Button>
+                <HListbox.Button className={cls.trigger}>
+                    <Button disabled={readonly}>{value ?? defaultValue}</Button>
                 </HListbox.Button>
                 <HListbox.Options
                     className={classNames(cls.options, {}, optionsClass)}
@@ -71,7 +68,14 @@ export function ListBox(props: ListBoxProps) {
                         >
                             {({ active, selected }) => (
                                 <li
-                                    className={classNames(cls.item, { [popupCls.active]: active, [popupCls.disabled]: item.disabled }, [])}
+                                    className={classNames(
+                                        cls.item,
+                                        {
+                                            [popupCls.active]: active,
+                                            [popupCls.disabled]: item.disabled,
+                                        },
+                                        [],
+                                    )}
                                 >
                                     {item.content}
                                 </li>
@@ -81,6 +85,5 @@ export function ListBox(props: ListBoxProps) {
                 </HListbox.Options>
             </HListbox>
         </HStack>
-
     );
 }

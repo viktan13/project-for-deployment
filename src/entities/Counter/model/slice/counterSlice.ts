@@ -23,4 +23,8 @@ export const counterSlice = buildSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { actions: counterActions, reducer: counterReducer, useActions: useCounterActions } = counterSlice;
+export const {
+    actions: counterActions,
+    reducer: counterReducer,
+    useActions: useCounterActions,
+} = counterSlice;

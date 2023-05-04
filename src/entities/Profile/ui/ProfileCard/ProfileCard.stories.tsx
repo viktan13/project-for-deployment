@@ -12,7 +12,9 @@ export default {
     },
 } as ComponentMeta<typeof ProfileCard>;
 
-const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...args} />;
+const Template: ComponentStory<typeof ProfileCard> = (args) => (
+    <ProfileCard {...args} />
+);
 
 export const Primary = Template.bind({});
 Primary.args = {
@@ -25,7 +27,6 @@ Primary.args = {
         username: 'admin',
         avatar: 'https://image.freepik.com/free-vector/hacker-mascot-logo-illustration_317408-106.jpg',
         country: Country.USA,
-
     },
 };
 

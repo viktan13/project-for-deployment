@@ -1,6 +1,4 @@
-import {
-    useCallback, useEffect, useRef, useState,
-} from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 interface ModalProps {
     isOpen?: boolean;
@@ -32,11 +30,14 @@ export function useModal(props: ModalProps) {
     }, [onClose, animationDelay]);
 
     // Новые ссылки!!!
-    const onKeyDown = useCallback((e: KeyboardEvent) => {
-        if (e.key === 'Escape') {
-            close();
-        }
-    }, [close]);
+    const onKeyDown = useCallback(
+        (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                close();
+            }
+        },
+        [close],
+    );
 
     useEffect(() => {
         if (isOpen) {

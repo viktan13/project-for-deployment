@@ -25,9 +25,21 @@ export const NotificationList = memo((props: NotificationListProps) => {
                 max
                 className={classNames(cls.NotificationList, {}, [className])}
             >
-                <Skeleton width="100%" height="80px" border="8px" />
-                <Skeleton width="100%" height="80px" border="8px" />
-                <Skeleton width="100%" height="80px" border="8px" />
+                <Skeleton
+                    width="100%"
+                    height="80px"
+                    border="8px"
+                />
+                <Skeleton
+                    width="100%"
+                    height="80px"
+                    border="8px"
+                />
+                <Skeleton
+                    width="100%"
+                    height="80px"
+                    border="8px"
+                />
             </VStack>
         );
     }

@@ -10,9 +10,14 @@ export default {
     },
     decorators: [
         (Story) => (
-            <div style={{
-                width: '100%', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center',
-            }}
+            <div
+                style={{
+                    width: '100%',
+                    height: '100vh',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }}
             >
                 <Story />
             </div>
@@ -21,7 +26,9 @@ export default {
 } as ComponentMeta<typeof ListBox>;
 
 // @ts-ignore
-const Template: ComponentStory<typeof ListBox> = (args) => <ListBox {...args} />;
+const Template: ComponentStory<typeof ListBox> = (args) => (
+    <ListBox {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {

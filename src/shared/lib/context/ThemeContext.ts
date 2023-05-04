@@ -2,7 +2,7 @@ import { createContext } from 'react';
 import { Theme } from '../../const/theme';
 
 export interface ThemeContextProp {
-    theme?: Theme,
+    theme?: Theme;
     setTheme?: (theme: Theme) => void;
 }
 
