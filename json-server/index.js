@@ -65,3 +65,5 @@ const PORT = 8443;
 httpsServer.listen(PORT, () => {
     console.log(`server is running on ${PORT} port`);
 });
+
+// for versel add  apiUrl=https://production-project-server-silk.vercel.app
