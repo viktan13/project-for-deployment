@@ -592,6 +592,10 @@
             "id": "1",
             "username": "admin",
             "password": "123",
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": true
+            },
             "roles": ["ADMIN"],
             "avatar": "https://tse4.mm.bing.net/th?id=OIP.9C-0Cr0tc3rls5s5N9GOuQHaE8&pid=Api&P=0"
         },
@@ -599,6 +603,10 @@
             "id": "2",
             "username": "user",
             "password": "123",
+            "features": {
+                "isArticleRatingEnabled": false,
+                "isCounterEnabled": false
+            },
             "roles": ["USER"],
             "avatar": "https://tse3.mm.bing.net/th?id=OIP.SFHxhDKpzeiJHCHB9uam_wHaF2&pid=Api&P=0"
         },
@@ -606,6 +614,10 @@
             "id": "3",
             "username": "testuser",
             "password": "123",
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": false
+            },
             "roles": ["ADMIN"],
             "avatar": "https://tse3.mm.bing.net/th?id=OIP.SFHxhDKpzeiJHCHB9uam_wHaF2&pid=Api&P=0"
         }
