@@ -12,6 +12,7 @@ const ThemeProvider = (props: ThemeProviderProps) => {
     const { children, initialTheme } = props;
 
     const { theme: defaultTheme } = useJsonSettings();
+
     const [isThemeInited, setIsThemeInited] = useState(false);
 
     const [theme, setTheme] = useState<Theme>(
@@ -24,7 +25,6 @@ const ThemeProvider = (props: ThemeProviderProps) => {
             setIsThemeInited(true);
         }
     }, [defaultTheme, isThemeInited]);
-
     const defaultProps = useMemo(
         () => ({
             theme,
@@ -32,7 +32,6 @@ const ThemeProvider = (props: ThemeProviderProps) => {
         }),
         [theme],
     );
-
     return (
         <ThemeContext.Provider value={defaultProps}>
             {children}
