@@ -13,3 +13,7 @@ export {
 } from './model/selectors/getUserRoles';
 
 export { UserRole } from './model/consts/userConsts';
+
+export { useJsonSettings } from './model/selectors/jsonSettings';
+
+export { saveJsonSettings } from './model/services/saveJsonSettings';
