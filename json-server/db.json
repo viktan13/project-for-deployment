@@ -639,9 +639,10 @@
       ],
       "avatar": "https://tse4.mm.bing.net/th?id=OIP.9C-0Cr0tc3rls5s5N9GOuQHaE8&pid=Api&P=0",
       "jsonSettings": {
-        "theme": "app_dark_theme",
+        "theme": "app_light_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "settingsPageHasBeenOpen": false,
+        "isArticlesPageWasOpened": false
       }
     },
     {
@@ -657,7 +658,8 @@
       ],
       "avatar": "https://tse3.mm.bing.net/th?id=OIP.SFHxhDKpzeiJHCHB9uam_wHaF2&pid=Api&P=0",
       "jsonSettings": {
-        "theme": "app_light_theme"
+        "theme": "app_light_theme",
+        "isArticlesPageWasOpened": true
       }
     },
     {
