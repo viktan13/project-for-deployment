@@ -642,7 +642,7 @@
         "theme": "app_light_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false,
-        "isArticlesPageWasOpened": false
+        "isArticlesPageWasOpened": true
       }
     },
     {
@@ -659,7 +659,7 @@
       "avatar": "https://tse3.mm.bing.net/th?id=OIP.SFHxhDKpzeiJHCHB9uam_wHaF2&pid=Api&P=0",
       "jsonSettings": {
         "theme": "app_light_theme",
-        "isArticlesPageWasOpened": true
+        "isArticlesPageWasOpened": false
       }
     },
     {
