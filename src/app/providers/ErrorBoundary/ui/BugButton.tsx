@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Button } from '@/shared/ui/Button';
+import { Button } from '@/shared/ui/deprecated/Button';
 
 // created for testing ErrorBoundary only
 export const BugButton = () => {

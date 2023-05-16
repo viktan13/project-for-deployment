@@ -1,12 +1,12 @@
 import { BrowserView, MobileView } from 'react-device-detect';
 import React, { memo, useCallback, useState } from 'react';
+import { Button, ThemeButton } from '@/shared/ui/deprecated/Button';
+import { Popover } from '@/shared/ui/deprecated/Popups';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ThemeButton } from '@/shared/ui/Button';
-import { Icon } from '@/shared/ui/Icon';
+import { Icon } from '@/shared/ui/deprecated/Icon';
 import Notifications from '@/shared/assets/icons/bell.svg';
 import { NotificationList } from '@/entities/Notification';
-import { Popover } from '@/shared/ui/Popups';
-import { Drawer } from '@/shared/ui/Drawer';
+import { Drawer } from '@/shared/ui/deprecated/Drawer';
 import cls from './NotificationButton.module.scss';
 
 export interface NotificationButtonProps {

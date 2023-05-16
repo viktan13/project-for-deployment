@@ -1,15 +1,15 @@
 import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Button, ThemeButton } from '@/shared/ui/deprecated/Button';
+import { HStack } from '@/shared/ui/deprecated/Stack';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Input } from '@/shared/ui/Input';
-import { Button, ThemeButton } from '@/shared/ui/Button';
+import { Input } from '@/shared/ui/deprecated/Input';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { HStack } from '@/shared/ui/Stack';
 import {
     getAddCommentFormError,
     getAddCommentFormText,

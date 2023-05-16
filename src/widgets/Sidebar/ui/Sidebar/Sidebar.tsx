@@ -1,16 +1,16 @@
 import { useTranslation } from 'react-i18next';
 import React, { memo, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { Button, ButtonSize, ThemeButton } from '@/shared/ui/deprecated/Button';
+import { AppLogo } from '@/shared/ui/deprecated/AppLogo';
+import { VStack } from '@/shared/ui/deprecated/Stack';
 import { ThemeSwitcher } from '@/features/ThemeSwitcher';
 import { LangSwitcher } from '@/features/LangSwitcher';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ButtonSize, ThemeButton } from '@/shared/ui/Button';
-import { VStack } from '@/shared/ui/Stack';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import { getSidebarItemsList } from '../../model/selectors/getSidebarItemsList';
 import cls from './Sidebar.module.scss';
 import { ToggleFeatures } from '@/shared/lib/features';
-import { AppLogo } from '@/shared/ui/AppLogo';
 
 export interface SidebarProps {
     className?: string;
