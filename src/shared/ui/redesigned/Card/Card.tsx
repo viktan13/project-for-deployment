@@ -38,7 +38,7 @@ export const Card = memo((props: CardProps) => {
             className={classNames(cls.Card, { [cls.max]: max }, [
                 className,
                 cls[variant],
-                paddingClass,
+                cls[paddingClass],
             ])}
             {...otherProps}
         >
