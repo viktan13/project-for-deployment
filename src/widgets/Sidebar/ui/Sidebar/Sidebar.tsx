@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import React, { memo, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import { AppLogo } from '@/shared/ui/redesigned/AppLogo';
 import { Button, ButtonSize, ThemeButton } from '@/shared/ui/deprecated/Button';
-import { VStack } from '@/shared/ui/deprecated/Stack';
 import { ThemeSwitcher } from '@/features/ThemeSwitcher';
 import { LangSwitcher } from '@/features/LangSwitcher';
 import { classNames } from '@/shared/lib/classNames/classNames';
