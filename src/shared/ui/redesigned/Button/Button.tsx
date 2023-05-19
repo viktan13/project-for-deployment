@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, memo, ReactNode } from 'react';
+import React, { ButtonHTMLAttributes, memo, ReactNode } from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
@@ -14,6 +14,8 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     disabled?: boolean;
     children?: ReactNode;
     fullwidth?: boolean;
+    addonLeft?: ReactNode;
+    addonRight?: ReactNode;
 }
 
 export const Button = memo((props: ButtonProps) => {
@@ -25,6 +27,8 @@ export const Button = memo((props: ButtonProps) => {
         disabled,
         size = 'm',
         fullwidth,
+        addonLeft,
+        addonRight,
         ...otherProps
     } = props;
 
@@ -32,6 +36,7 @@ export const Button = memo((props: ButtonProps) => {
         [cls.square]: square,
         [cls.disabled]: disabled,
         [cls.fullwidth]: fullwidth,
+        [cls.withAddon]: Boolean(addonRight) || Boolean(addonRight),
     };
 
     return (
@@ -45,7 +50,9 @@ export const Button = memo((props: ButtonProps) => {
             ])}
             {...otherProps}
         >
+            <div className={cls.addonLeft}>{addonLeft}</div>
             {children}
+            <div className={cls.addonRight}>{addonRight}</div>
         </button>
     );
 });

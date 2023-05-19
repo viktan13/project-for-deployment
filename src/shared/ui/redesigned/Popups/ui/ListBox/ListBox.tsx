@@ -9,6 +9,8 @@ import { HStack } from '../../../../redesigned/Stack';
 import { Button } from '../../../Button/Button';
 import cls from './ListBox.module.scss';
 import popupCls from '../../styles/popup.module.scss';
+import { Icon } from '../../../Icon';
+import ArrowIcon from '@/shared/assets/icons/arrow-bottom.svg';
 
 interface ListBoxItem<T extends string> {
     value: T;
@@ -64,6 +66,7 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
                     <Button
                         variant="filled"
                         disabled={readonly}
+                        addonRight={<Icon SVG={ArrowIcon} />}
                     >
                         {selectedItem?.content ?? defaultValue}
                     </Button>
