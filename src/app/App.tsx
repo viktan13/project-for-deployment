@@ -41,7 +41,10 @@ const App = () => {
                 </div>
             }
             off={
-                <div className={classNames('app', {}, [theme])}>
+                <div
+                    id="app"
+                    className={classNames('app', {}, [theme])}
+                >
                     <Suspense fallback="">
                         <Navbar />
                         <div className="content-page">

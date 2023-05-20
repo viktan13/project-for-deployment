@@ -1,5 +1,6 @@
 import { BrowserView, MobileView } from 'react-device-detect';
 import React, { memo, useCallback, useState } from 'react';
+import { Drawer } from '@/shared/ui/redesigned/Drawer';
 import {
     Button as ButtonDeprecated,
     ThemeButton,
@@ -11,7 +12,6 @@ import { Icon } from '@/shared/ui/redesigned/Icon';
 import NotificationsDeprecated from '@/shared/assets/icons/bell.svg';
 import Notifications from '@/shared/assets/icons/notification.svg';
 import { NotificationList } from '@/entities/Notification';
-import { Drawer } from '@/shared/ui/deprecated/Drawer';
 import cls from './NotificationButton.module.scss';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { Popover } from '@/shared/ui/redesigned/Popups';
