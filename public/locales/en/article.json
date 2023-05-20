@@ -1,9 +1,9 @@
 {
-    "Article_Error": "Error while loading the article",
-    "Articles": "Articles",
-    "Articles_Not_Found": "The article is not found",
-    "Comments": "Comments",
-    "Details": "Article details",
-    "Recommendation": "Recommendations",
-    "ArticleRatingSoon": "Article rating will appear soon"
+  "ArticleRatingSoon": "Article rating will appear soon",
+  "Article_Error": "Error while loading the article",
+  "Articles": "Articles",
+  "Articles_Not_Found": "The article is not found",
+  "Comments": "Comments",
+  "Details": "Article details",
+  "Recommendation": "Recommendations"
 }

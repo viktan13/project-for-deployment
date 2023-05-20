@@ -6,7 +6,11 @@ const sliceName = process.argv[3];
 const layers = ['pages', 'entities', 'features'];
 
 if (!layer || !layers.includes(layer)) {
-    throw new Error(`Layer is not defined. Please, specify layer name: ${layers.join(' or ')}`);
+    throw new Error(
+        `Layer is not defined. Please, specify layer name: ${layers.join(
+            ' or ',
+        )}`,
+    );
 }
 
 if (!sliceName) {
