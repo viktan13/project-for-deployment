@@ -61,5 +61,7 @@
   "order": "order",
   "password": "password",
   "username": "username",
-  "views": "views"
+  "views": "views",
+  "{{count}} views_one": "1 view",
+  "{{count}} views_other": "{{count}} views"
 }
