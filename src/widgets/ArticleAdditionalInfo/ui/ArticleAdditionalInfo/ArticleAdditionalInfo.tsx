@@ -39,7 +39,7 @@ export const ArticleAdditionalInfo = memo(
                     <Text text={createdAt} />
                 </HStack>
                 <Button onClick={onEdit}>{t('Edit')}</Button>
-                <Text text={t('{{count}} views', { count: views })} />
+                <Text text={t('views', { count: views })} />
             </VStack>
         );
     },

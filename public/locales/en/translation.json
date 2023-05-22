@@ -62,6 +62,6 @@
   "password": "password",
   "username": "username",
   "views": "views",
-  "{{count}} views_one": "1 view",
-  "{{count}} views_other": "{{count}} views"
+  "views_one": "1 view",
+  "views_other": "{{count}} views"
 }

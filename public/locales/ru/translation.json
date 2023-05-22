@@ -62,7 +62,7 @@
   "password": "введите пароль",
   "username": "введите username",
   "views": "просмотрам",
-  "{{count}} views_one": "1 просмотр",
-  "{{count}} views_few": "{{count}} просмотра",
-  "{{count}} views_many": "{{count}} просмотров"
+  "views_one": "1 просмотр",
+  "views_few": "{{count}} просмотра",
+  "views_many": "{{count}} просмотров"
 }
