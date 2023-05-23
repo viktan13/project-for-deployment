@@ -623,6 +623,12 @@
       "userId": "1",
       "text": "shsdghsdh",
       "id": "lVQ7a-8"
+    },
+    {
+      "articleId": "7",
+      "userId": "1",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolorem ipsam molestias perferendis porro possimus reiciendis. Ad     aspernatur eaque esse, fugiat iure nam natus nobis odio repudiandae saepe sit sunt. Aspernatur atque eos expedita facere facilis impedit molestiae odit quisquam rem ut? Adipisci, dicta dolor facilis necessitatibus     obcaecati quibusdam voluptas voluptatibus. Debitis deserunt dicta dolor quia tempore unde vitae voluptas! Eligendi eos expedita id ipsum optio quasi, quis quisquam temporibus? A ad amet animi consectetur cumque, debitis dolorum ducimus eaque     error et, eum exercitationem fugiat neque reiciendis sit veritatis vero. Animi cumque deserunt doloribus id itaque, nobis perspiciatis placeat ratione reprehenderit, sapiente sit, tempore voluptas. Ex modi     nihil nisi quaerat quo quos rem. A culpa dignissimos explicabo magnam molestias, rem. A aperiam dolore fugiat in magni molestias optio, provident quam quibusdam quod quos ratione reiciendis, saepe sapiente similique     tenetur unde veniam? Architecto autem commodi est excepturi id, praesentium ratione repudiandae. Dolorum magni optio vero. Adipisci consequatur dignissimos eum excepturi exercitationem in iste laboriosam molestiae odit pariatur     perferendis possimus quasi quia reiciendis sed sequi similique sit soluta tempora tempore, ut voluptate. Aut deleniti dolorum ex ipsam magnam necessitatibus officiis sunt ut vel voluptas. Fugiat, maxime, voluptatum? Accusantium beatae     deserunt ducimus eaque ipsa, ipsam iure labore neque nesciunt rerum sed veniam voluptatum. Beatae consequuntur distinctio harum ipsum iste nulla odio praesentium quisquam sint voluptates. Asperiores, blanditiis corporis,     deserunt eligendi error, et eum inventore ipsa magni nemo perferendis placeat provident quod similique voluptate. Blanditiis dolore expedita hic in, laborum laudantium quas qui quidem rem similique. Alias aspernatur beatae cupiditate dicta dolorum,     illo in ipsam praesentium quos repellat, repellendus vel voluptate voluptatum. Dolores, soluta? Ad culpa delectus eaque et eveniet expedita ipsa iusto molestiae nisi, nulla quos recusandae repudiandae similique. Ad, aliquam     architecto consequatur delectus dolor earum eius eos id ipsam possimus reprehenderit suscipit.",
+      "id": "DmMW0AW"
     }
   ],
   "users": [
@@ -640,7 +646,7 @@
       ],
       "avatar": "https://tse4.mm.bing.net/th?id=OIP.9C-0Cr0tc3rls5s5N9GOuQHaE8&pid=Api&P=0",
       "jsonSettings": {
-        "theme": "app_orange_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false,
         "isArticlesPageWasOpened": true

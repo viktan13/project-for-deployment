@@ -2,7 +2,8 @@ import { useSelector } from 'react-redux';
 import { memo, useCallback, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { VStack } from '@/shared/ui/redesigned/Stack';
-import { Text, TextSize } from '@/shared/ui/deprecated/Text';
+import { Text as TextDeprecated, TextSize } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { AddCommentForm } from '@/features/AddCommentForm';
 import { CommentList } from '@/entities/Comment';
@@ -13,6 +14,7 @@ import { getArticleComments } from '../../model/slices/articleDetailsCommentsSli
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
+import { ToggleFeatures } from '@/shared/lib/features';
 
 export interface ArticleDetailsCommentsProps {
     className?: string;
@@ -44,10 +46,22 @@ export const ArticleDetailsComments = memo(
                 max
                 className={classNames('', {}, [className])}
             >
-                <Text
-                    size={TextSize.L}
-                    title={t('Comments')}
+                <ToggleFeatures
+                    feature="isAppRedesigned"
+                    on={
+                        <Text
+                            size="l"
+                            title={t('Comments')}
+                        />
+                    }
+                    off={
+                        <TextDeprecated
+                            size={TextSize.L}
+                            title={t('Comments')}
+                        />
+                    }
                 />
+
                 <Suspense fallback={<Loader />}>
                     <AddCommentForm onSendComment={onSendComment} />
                 </Suspense>

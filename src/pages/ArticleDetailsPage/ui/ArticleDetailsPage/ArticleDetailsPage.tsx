@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { useParams } from 'react-router-dom';
 import { VStack } from '@/shared/ui/redesigned/Stack';
-import { Card } from '@/shared/ui/deprecated/Card';
+import { Card as CardDeprecated } from '@/shared/ui/deprecated/Card';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ArticleDetails } from '@/entities/Article';
 import {
@@ -20,6 +20,7 @@ import { ToggleFeatures } from '@/shared/lib/features';
 import { StickyContentLayout } from '@/shared/layouts/StickyContentLayout';
 import { DetailsContainer } from '../DetailsContainer/DetailsContainer';
 import { AdditionalInfoContainer } from '../AdditionalInfoContainer/AdditionalInfoContainer';
+import { Card } from '@/shared/ui/redesigned/Card';
 
 export interface ArticleDetailsPageProps {
     className?: string;
@@ -54,6 +55,15 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
                                     max
                                 >
                                     <DetailsContainer />
+                                    <ToggleFeatures
+                                        feature="isArticleRatingEnabled"
+                                        on={<ArticleRating articleId={id} />}
+                                        off={
+                                            <Card>
+                                                {t('ArticleRatingSoon')}
+                                            </Card>
+                                        }
+                                    />
                                     <ArticleRecommendationsList />
                                     <ArticleDetailsComments id={id} />
                                 </VStack>
@@ -77,7 +87,11 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
                             <ToggleFeatures
                                 feature="isArticleRatingEnabled"
                                 on={<ArticleRating articleId={id} />}
-                                off={<Card>{t('ArticleRatingSoon')}</Card>}
+                                off={
+                                    <CardDeprecated>
+                                        {t('ArticleRatingSoon')}
+                                    </CardDeprecated>
+                                }
                             />
                             <ArticleRecommendationsList />
                             <ArticleDetailsComments id={id} />

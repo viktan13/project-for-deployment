@@ -1,13 +1,15 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
-import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
+import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton';
+import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
 import { RatingCard } from '@/entities/Rating';
 import {
     useGetArticleRating,
     useRateArticle,
 } from '../../api/articleRatingApi';
 import { getUserAuthData } from '@/entities/User';
+import { ToggleFeatures } from '@/shared/lib/features';
 
 export interface ArticleRatingProps {
     className?: string;
@@ -60,9 +62,20 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
 
     if (isLoading)
         return (
-            <Skeleton
-                width="100%"
-                height={120}
+            <ToggleFeatures
+                feature="isAppRedesigned"
+                on={
+                    <Skeleton
+                        width="100%"
+                        height={120}
+                    />
+                }
+                off={
+                    <SkeletonDeprecated
+                        width="100%"
+                        height={120}
+                    />
+                }
             />
         );
 
