@@ -1,10 +1,14 @@
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { Button, ThemeButton } from '@/shared/ui/deprecated/Button';
-import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
+import {
+    Button as ButtonDeprecated,
+    ThemeButton,
+} from '@/shared/ui/deprecated/Button';
+import { Text as TextDeprecated, TextTheme } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Input } from '@/shared/ui/deprecated/Input';
+import { Input as InputDeprecated } from '@/shared/ui/deprecated/Input';
 import {
     DynamicModuleLoader,
     ReducersList,
@@ -17,6 +21,10 @@ import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLo
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import cls from './LoginForm.module.scss';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { Button } from '@/shared/ui/redesigned/Button';
+import { Input } from '@/shared/ui/redesigned/Input';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 
 export interface LoginFormProps {
     className?: string;
@@ -63,38 +71,77 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
             removeAfterUnmount
             reducers={initialReducers}
         >
-            <div className={classNames(cls.LoginForm, {}, [className])}>
-                <Text title={t('Login form')} />
-                {error && (
-                    <Text
-                        text={t('Username or password is not correct')}
-                        theme={TextTheme.ERROR}
-                    />
-                )}
-                <Input
-                    autoFocus
-                    type="text"
-                    className={cls.input}
-                    placeholder={t('username')}
-                    onChange={onChangeUsername}
-                    value={username}
-                />
-                <Input
-                    type="text"
-                    className={cls.input}
-                    placeholder={t('password')}
-                    onChange={onChangePassword}
-                    value={password}
-                />
-                <Button
-                    theme={ThemeButton.OUTLINE}
-                    className={cls.loginBtn}
-                    onClick={onLoginClick}
-                    disabled={isLoading}
-                >
-                    {t('Login')}
-                </Button>
-            </div>
+            <ToggleFeatures
+                feature="isAppRedesigned"
+                on={
+                    <VStack gap="16">
+                        <Text title={t('Login form')} />
+                        {error && (
+                            <Text
+                                text={t('Username or password is not correct')}
+                                variant="error"
+                            />
+                        )}
+                        <Input
+                            autoFocus
+                            type="text"
+                            className={cls.input}
+                            placeholder={t('username')}
+                            onChange={onChangeUsername}
+                            value={username}
+                        />
+                        <Input
+                            type="text"
+                            className={cls.input}
+                            placeholder={t('password')}
+                            onChange={onChangePassword}
+                            value={password}
+                        />
+                        <Button
+                            variant="outline"
+                            onClick={onLoginClick}
+                            disabled={isLoading}
+                            className={cls.loginBtn}
+                        >
+                            {t('Login')}
+                        </Button>
+                    </VStack>
+                }
+                off={
+                    <div className={classNames(cls.LoginForm, {}, [className])}>
+                        <TextDeprecated title={t('Login form')} />
+                        {error && (
+                            <TextDeprecated
+                                text={t('Username or password is not correct')}
+                                theme={TextTheme.ERROR}
+                            />
+                        )}
+                        <InputDeprecated
+                            autoFocus
+                            type="text"
+                            className={cls.input}
+                            placeholder={t('username')}
+                            onChange={onChangeUsername}
+                            value={username}
+                        />
+                        <InputDeprecated
+                            type="text"
+                            className={cls.input}
+                            placeholder={t('password')}
+                            onChange={onChangePassword}
+                            value={password}
+                        />
+                        <ButtonDeprecated
+                            theme={ThemeButton.OUTLINE}
+                            className={cls.loginBtn}
+                            onClick={onLoginClick}
+                            disabled={isLoading}
+                        >
+                            {t('Login')}
+                        </ButtonDeprecated>
+                    </div>
+                }
+            />
         </DynamicModuleLoader>
     );
 });

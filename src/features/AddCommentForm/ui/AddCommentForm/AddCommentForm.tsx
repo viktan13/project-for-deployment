@@ -62,7 +62,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
                 on={
                     <Card
                         max
-                        border="round"
+                        border="partial"
                         padding="24"
                     >
                         <HStack
