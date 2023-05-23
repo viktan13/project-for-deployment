@@ -135,12 +135,19 @@ const ArticleDetailsSkeleton = () => {
             gap="16"
             max
         >
-            {/* <Skeleton */}
-            {/*     className={cls.avatar} */}
-            {/*     width={200} */}
-            {/*     height={200} */}
-            {/*     border="50%" */}
-            {/* /> */}
+            <ToggleFeatures
+                feature="isAppRedesigned"
+                on={<div />}
+                off={
+                    <Skeleton
+                        className={cls.avatar}
+                        width={200}
+                        height={200}
+                        border="50%"
+                    />
+                }
+            />
+
             <Skeleton
                 className={cls.title}
                 width={300}
