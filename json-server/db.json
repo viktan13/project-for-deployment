@@ -639,7 +639,7 @@
       "features": {
         "isArticleRatingEnabled": true,
         "isCounterEnabled": true,
-        "isAppRedesigned": true
+        "isAppRedesigned": false
       },
       "roles": [
         "ADMIN"
