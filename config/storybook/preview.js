@@ -1,9 +1,10 @@
 import { addDecorator } from '@storybook/react';
-import { StyleDecorator } from '../../@/shared/config/storybook/StyleDecorator/StyleDecorator';
-import { ThemeDecorator } from '../../@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { RouterDecorator } from '../../@/shared/config/storybook/RouterDecorator/RouterDecorator';
-import { SuspenseDecorator } from '../../@/shared/config/storybook/SuspenseDecorator/SuspenseDecorator';
-import { Theme } from '../../@/shared/const/theme';
+import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator/StyleDecorator';
+import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { RouterDecorator } from '../../src/shared/config/storybook/RouterDecorator/RouterDecorator';
+import { SuspenseDecorator } from '../../src/shared/config/storybook/SuspenseDecorator/SuspenseDecorator';
+import { Theme } from '../../src/shared/const/theme';
+import { FeatureFlagsDecorator } from '../../src/shared/config/storybook/FeatureFlagsDecorator/FeatureFlagsDecorator';
 
 export const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -28,3 +29,4 @@ addDecorator(StyleDecorator);
 addDecorator(ThemeDecorator(Theme.LIGHT));
 addDecorator(RouterDecorator);
 addDecorator(SuspenseDecorator);
+addDecorator(FeatureFlagsDecorator({}));
