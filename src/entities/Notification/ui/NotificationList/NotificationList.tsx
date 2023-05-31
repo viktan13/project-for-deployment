@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
 import { VStack } from '@/shared/ui/redesigned/Stack';
 import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton';
 import { Skeleton as SkeletonRedesigned } from '@/shared/ui/redesigned/Skeleton';
@@ -15,7 +14,6 @@ export interface NotificationListProps {
 
 export const NotificationList = memo((props: NotificationListProps) => {
     const { className } = props;
-    const { t } = useTranslation();
     const { data, isLoading } = useNotifications(null, {
         pollingInterval: 10000,
     });

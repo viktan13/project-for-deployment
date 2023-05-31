@@ -1,6 +1,5 @@
 import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import cls from './ViewSelectorContainer.module.scss';
 import { ArticleViewSelector } from '@/features/ArticleViewSelector';
 import { useArticleFilters } from '../../lib/hook/useArticleFilters';
 
@@ -16,9 +15,7 @@ export const ViewSelectorContainer = memo(
 
         return (
             <ArticleViewSelector
-                className={classNames(cls.ViewSelectorContainer, {}, [
-                    className,
-                ])}
+                className={classNames('', {}, [className])}
                 view={view}
                 onViewClick={onChangeView}
             />

@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { VStack } from '@/shared/ui/redesigned/Stack';
 import { Page } from '@/widgets/Page';
@@ -10,8 +9,6 @@ export interface ProfilePageProps {
 }
 
 const ProfilePage = ({ classname }: ProfilePageProps) => {
-    const { t } = useTranslation('profile');
-
     const { id } = useParams<{ id: string }>();
 
     if (!id) return null;

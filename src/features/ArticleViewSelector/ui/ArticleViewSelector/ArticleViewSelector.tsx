@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
 import {
     Button as ButtonDeprecated,
     ThemeButton,
@@ -44,7 +43,6 @@ const viewTypes = [
 
 export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
     const { className, view, onViewClick } = props;
-    const { t } = useTranslation();
 
     const onClick = (newView: ArticleView) => () => {
         onViewClick(newView);

@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { Text as TextDeprecated } from '@/shared/ui/deprecated/Text';
 import { Text } from '@/shared/ui/redesigned/Text';
@@ -14,7 +13,6 @@ export interface ArticleTextBlockComponentProps {
 
 export const ArticleTextBlockComponent = memo(
     ({ className, block }: ArticleTextBlockComponentProps) => {
-        const { t } = useTranslation();
         return (
             <div
                 className={classNames(cls.ArticleTextBlockComponent, {}, [

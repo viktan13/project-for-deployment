@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
 import { ArticlesFilters } from '@/widgets/ArticlesFilters';
 import { useArticleFilters } from '../../lib/hook/useArticleFilters';
 
@@ -9,7 +8,6 @@ export interface FiltersContainerProps {
 
 export const FiltersContainer = memo((props: FiltersContainerProps) => {
     const { className } = props;
-    const { t } = useTranslation();
     const {
         search,
         onChangeSearch,

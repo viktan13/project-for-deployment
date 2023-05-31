@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
 import { Card as CardDeprecated, CardTheme } from '@/shared/ui/deprecated/Card';
 import { Text as TextDeprecated } from '@/shared/ui/deprecated/Text';
 import { Text } from '@/shared/ui/redesigned/Text';
@@ -16,7 +15,6 @@ export interface NotificationItemProps {
 
 export const NotificationItem = memo((props: NotificationItemProps) => {
     const { className, item } = props;
-    const { t } = useTranslation();
 
     const content = (
         <ToggleFeatures

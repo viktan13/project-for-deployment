@@ -50,7 +50,7 @@
         right: 0;
         top: 50%;
         z-index: 10;
-        transform: rotate(90deg)
+        transform: rotate(90deg);
     }
 
     .switchers {
@@ -64,8 +64,6 @@
         gap: 16px;
     }
 }
-
-
 
 .collapsed {
     width: var(--sidebar-width-collapsed);
@@ -86,7 +84,7 @@
     }
 
     .collapseBtn {
-        transform: rotate(-90deg)
+        transform: rotate(-90deg);
     }
 }
 
@@ -110,11 +108,4 @@
     .collapseBtn {
         transform: rotate(-90deg);
     }
-
-    .switchers {
-        flex-direction: column;
-        align-items: center;
-    }
 }
-
-

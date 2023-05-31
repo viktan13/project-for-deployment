@@ -1,5 +1,4 @@
 import { memo, useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Card } from '@/shared/ui/redesigned/Card';
@@ -15,7 +14,6 @@ export interface AdditionalInfoContainerProps {
 export const AdditionalInfoContainer = memo(
     (props: AdditionalInfoContainerProps) => {
         const { className } = props;
-        const { t } = useTranslation();
 
         const article = useSelector(articleDetailsData);
 

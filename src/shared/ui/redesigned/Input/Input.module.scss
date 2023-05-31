@@ -26,12 +26,14 @@
 .focused {
     border: 1px solid var(--accent-redesigned);
 
-    .addonLeft svg, .addonRight svg {
+    .addonLeft svg,
+    .addonRight svg {
         color: var(--accent-redesigned);
     }
 }
 
-.addonLeft, .addonRight {
+.addonLeft,
+.addonRight {
     display: flex;
 }
 

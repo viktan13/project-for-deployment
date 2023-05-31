@@ -1,6 +1,5 @@
 import { Fragment, ReactNode, useMemo } from 'react';
 import { Listbox as HListbox } from '@headlessui/react';
-import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DropDownDirection } from '@/shared/types/ui';
 import { mapDirectionToClass } from '../../styles/const';
@@ -40,8 +39,6 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
         direction = 'bottom right',
         label,
     } = props;
-
-    const { t } = useTranslation();
 
     const optionsClass = [mapDirectionToClass[direction], popupCls.menu];
 
