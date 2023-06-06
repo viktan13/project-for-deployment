@@ -4,6 +4,7 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import MainPage from './MainPage';
 import { Theme } from '@/shared/const/theme';
+import { RouterDecorator } from '@/shared/config/storybook/RouterDecorator/RouterDecorator';
 
 export default {
     title: 'pages/MainPage/MainPage',
@@ -11,7 +12,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [StoreDecorator({})],
+    decorators: [StoreDecorator({}), RouterDecorator],
 } as ComponentMeta<typeof MainPage>;
 
 // @ts-ignore

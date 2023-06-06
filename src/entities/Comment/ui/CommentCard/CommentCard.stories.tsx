@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { CommentCard } from './CommentCard';
 import { FeatureFlagsDecorator } from '@/shared/config/storybook/FeatureFlagsDecorator/FeatureFlagsDecorator';
+import { RouterDecorator } from '@/shared/config/storybook/RouterDecorator/RouterDecorator';
 
 export default {
     title: 'entities/Comment/CommentCard',
@@ -9,6 +10,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [RouterDecorator],
 } as ComponentMeta<typeof CommentCard>;
 
 // @ts-ignore

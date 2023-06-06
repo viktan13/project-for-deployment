@@ -1,6 +1,7 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { CommentList } from './CommentList';
+import { RouterDecorator } from '@/shared/config/storybook/RouterDecorator/RouterDecorator';
 
 export default {
     title: 'entities/Comment/CommentList',
@@ -8,6 +9,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [RouterDecorator],
 } as ComponentMeta<typeof CommentList>;
 
 // @ts-ignore

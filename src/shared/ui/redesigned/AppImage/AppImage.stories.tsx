@@ -16,4 +16,11 @@ const Template: ComponentStory<typeof AppImage> = (args) => (
 );
 
 export const Normal = Template.bind({});
-Normal.args = {};
+Normal.args = {
+    src: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
+};
+
+export const NoImage = Template.bind({});
+NoImage.args = {
+    alt: 'NO IMAGE',
+};

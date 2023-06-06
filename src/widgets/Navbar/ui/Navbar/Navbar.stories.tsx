@@ -5,6 +5,7 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Navbar } from './Navbar';
 import { Theme } from '@/shared/const/theme';
+import { RouterDecorator } from '@/shared/config/storybook/RouterDecorator/RouterDecorator';
 
 export default {
     title: 'widgets/Navbar/Navbar',
@@ -12,6 +13,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [RouterDecorator],
 } as ComponentMeta<typeof Navbar>;
 
 const Template: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />;
