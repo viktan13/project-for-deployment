@@ -13,7 +13,7 @@ import { ToggleFeatures } from '@/shared/lib/features';
 
 export interface ArticleRatingProps {
     className?: string;
-    articleId: string;
+    articleId?: string;
 }
 
 const ArticleRating = memo((props: ArticleRatingProps) => {
@@ -34,7 +34,7 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
             try {
                 rateArticleMutation({
                     userId: userData?.id ?? '',
-                    articleId,
+                    articleId: articleId ?? '',
                     rate: startCount,
                     feedback,
                 });

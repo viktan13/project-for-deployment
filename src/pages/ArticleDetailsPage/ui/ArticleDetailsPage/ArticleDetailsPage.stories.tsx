@@ -1,6 +1,5 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ArticleBlockType, Article, ArticleType } from '@/entities/Article';
 import ArticleDetailsPage from './ArticleDetailsPage';
@@ -12,16 +11,16 @@ export default {
         backgroundColor: { control: 'color' },
     },
     decorators: [
-        (Story) => (
-            <MemoryRouter initialEntries={['/articles/1']}>
-                <Routes>
-                    <Route
-                        path="/articles/:id"
-                        element={<Story />}
-                    />
-                </Routes>
-            </MemoryRouter>
-        ),
+        // (Story) => (
+        //     <MemoryRouter initialEntries={['/articles/1']}>
+        //         <Routes>
+        //             <Route
+        //                 path="/articles/:id"
+        //                 element={<Story />}
+        //             />
+        //         </Routes>
+        //     </MemoryRouter>
+        // ),
     ],
 } as ComponentMeta<typeof ArticleDetailsPage>;
 

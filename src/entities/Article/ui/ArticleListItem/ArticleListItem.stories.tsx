@@ -7,7 +7,6 @@ import {
 } from '../../model/consts/articleConsts';
 import { Article } from '../../model/types/article';
 import { ArticleListItem } from './ArticleListItem';
-import { RouterDecorator } from '@/shared/config/storybook/RouterDecorator/RouterDecorator';
 
 const article: Article = {
     id: '1',
@@ -89,7 +88,6 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [RouterDecorator],
 } as ComponentMeta<typeof ArticleListItem>;
 
 // @ts-ignore

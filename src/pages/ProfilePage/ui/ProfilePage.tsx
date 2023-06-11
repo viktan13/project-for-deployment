@@ -11,8 +11,6 @@ export interface ProfilePageProps {
 const ProfilePage = ({ classname }: ProfilePageProps) => {
     const { id } = useParams<{ id: string }>();
 
-    if (!id) return null;
-
     return (
         <Page data-testid="ProfilePage">
             <VStack

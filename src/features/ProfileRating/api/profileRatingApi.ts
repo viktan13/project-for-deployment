@@ -3,12 +3,12 @@ import { Rating } from '@/entities/Rating';
 
 interface GetProfileRatingArgs {
     userId: string;
-    profileId: string;
+    profileId?: string;
 }
 
 interface RateProfileArgs {
     userId: string;
-    profileId: string;
+    profileId?: string;
     rate: number;
     feedback?: string;
 }

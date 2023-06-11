@@ -34,8 +34,6 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
         articleDetailsPage: articleDetailsPageReducer,
     };
 
-    if (!id) return null;
-
     return (
         <DynamicModuleLoader reducers={reducers}>
             <ToggleFeatures

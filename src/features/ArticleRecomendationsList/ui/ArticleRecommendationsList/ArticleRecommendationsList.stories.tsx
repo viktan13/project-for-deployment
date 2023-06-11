@@ -4,7 +4,6 @@ import withMock from 'storybook-addon-mock';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Article } from '@/entities/Article';
 import { ArticleRecommendationsList } from './ArticleRecommendationsList';
-import { RouterDecorator } from '@/shared/config/storybook/RouterDecorator/RouterDecorator';
 
 const article: Article = {
     id: '1',
@@ -33,7 +32,7 @@ const Template: ComponentStory<typeof ArticleRecommendationsList> = (args) => (
 
 export const Normal = Template.bind({});
 Normal.args = {};
-Normal.decorators = [StoreDecorator({}), RouterDecorator];
+Normal.decorators = [StoreDecorator({})];
 Normal.parameters = {
     mockData: [
         {
