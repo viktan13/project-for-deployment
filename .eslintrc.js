@@ -79,6 +79,7 @@ module.exports = {
                     'variant',
                     'size',
                     'wrap',
+                    'path',
                 ],
             },
         ],

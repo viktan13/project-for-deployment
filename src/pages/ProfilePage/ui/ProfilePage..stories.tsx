@@ -28,16 +28,6 @@ export default {
     },
     decorators: [
         withMock,
-        // (Story) => (
-        //     <MemoryRouter initialEntries={['/profile/1']}>
-        //         <Routes>
-        //             <Route
-        //                 path="/profile/:id"
-        //                 element={<Story />}
-        //             />
-        //         </Routes>
-        //     </MemoryRouter>
-        // ),
         StoreDecorator({
             profile: {
                 form: profile,

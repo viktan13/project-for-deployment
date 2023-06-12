@@ -99,19 +99,7 @@ export default {
             },
         ],
     },
-    decorators: [
-        withMock,
-        // (Story) => (
-        //     <MemoryRouter initialEntries={['/articles/1']}>
-        //         <Routes>
-        //             <Route
-        //                 path="/articles/:id"
-        //                 element={<Story />}
-        //             />
-        //         </Routes>
-        //     </MemoryRouter>
-        // ),
-    ],
+    decorators: [withMock],
 } as ComponentMeta<typeof ArticleDetailsPage>;
 
 // @ts-ignore
