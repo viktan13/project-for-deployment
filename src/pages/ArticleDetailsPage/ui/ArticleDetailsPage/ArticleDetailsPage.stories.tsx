@@ -1,33 +1,9 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import withMock from 'storybook-addon-mock';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ArticleBlockType, Article, ArticleType } from '@/entities/Article';
 import ArticleDetailsPage from './ArticleDetailsPage';
-
-export default {
-    title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
-    component: ArticleDetailsPage,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-    decorators: [
-        // (Story) => (
-        //     <MemoryRouter initialEntries={['/articles/1']}>
-        //         <Routes>
-        //             <Route
-        //                 path="/articles/:id"
-        //                 element={<Story />}
-        //             />
-        //         </Routes>
-        //     </MemoryRouter>
-        // ),
-    ],
-} as ComponentMeta<typeof ArticleDetailsPage>;
-
-// @ts-ignore
-const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => (
-    <ArticleDetailsPage {...args} />
-);
 
 const article: Article = {
     id: '1',
@@ -102,6 +78,46 @@ const article: Article = {
         },
     ],
 };
+
+export default {
+    title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
+    component: ArticleDetailsPage,
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
+    parameters: {
+        mockData: [
+            {
+                url: `${__API__}/articles?_limit=3&_expand=user`,
+                method: 'GET',
+                status: 200,
+                response: [
+                    { ...article, id: '1' },
+                    { ...article, id: '2' },
+                    { ...article, id: '3' },
+                ],
+            },
+        ],
+    },
+    decorators: [
+        withMock,
+        // (Story) => (
+        //     <MemoryRouter initialEntries={['/articles/1']}>
+        //         <Routes>
+        //             <Route
+        //                 path="/articles/:id"
+        //                 element={<Story />}
+        //             />
+        //         </Routes>
+        //     </MemoryRouter>
+        // ),
+    ],
+} as ComponentMeta<typeof ArticleDetailsPage>;
+
+// @ts-ignore
+const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => (
+    <ArticleDetailsPage {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {};

@@ -11,14 +11,13 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDe
 
 const profile: Profile = {
     id: '1',
-    name: 'Viktor',
-    lastName: 'Dzyuba',
-    age: 50,
+    name: 'admin',
+    lastName: 'admin',
+    age: 465,
     currency: Currency.USD,
-    city: 'Palatine',
-    username: 'admin',
-    avatar: 'https://image.freepik.com/free-vector/hacker-mascot-logo-illustration_317408-106.jpg',
-    country: Country.USA,
+    country: Country.Canada,
+    city: 'Moscow',
+    username: 'admin213',
 };
 
 export default {
@@ -26,7 +25,6 @@ export default {
     component: ProfilePage,
     argTypes: {
         backgroundColor: { control: 'color' },
-        id: '1',
     },
     decorators: [
         withMock,
@@ -62,7 +60,7 @@ export default {
                 status: 200,
                 response: [
                     {
-                        rate: '4',
+                        rate: 4,
                     },
                 ],
             },
