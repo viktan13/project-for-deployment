@@ -1,7 +1,7 @@
 import { memo, useState } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './StarRating.module.scss';
-import { Icon as IcanDeprecated } from '../Icon/Icon';
+import { Icon as IconDeprecated } from '../Icon/Icon';
 import StarIcon from '@/shared/assets/icons/star.svg';
 import { toggleFeatures, ToggleFeatures } from '@/shared/lib/features';
 import { Icon } from '../../redesigned/Icon';
@@ -72,7 +72,6 @@ export const StarRating = memo((props: StarRatingProps) => {
                     height: size,
                     width: size,
                     SVG: StarIcon,
-                    key: starNumber,
                     onMouseEnter: onHover(starNumber),
                     onMouseLeave: onLeave,
                     onClick: onClick(starNumber),
@@ -82,11 +81,17 @@ export const StarRating = memo((props: StarRatingProps) => {
                         feature="isAppRedesigned"
                         on={
                             <Icon
+                                key={starNumber}
                                 clickable={!isSelected}
                                 {...commonProps}
                             />
                         }
-                        off={<IcanDeprecated {...commonProps} />}
+                        off={
+                            <IconDeprecated
+                                key={starNumber}
+                                {...commonProps}
+                            />
+                        }
                     />
                 );
             })}
